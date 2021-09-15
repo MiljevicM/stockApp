@@ -1,0 +1,73 @@
+@import "_mixins.scss";
+
+.login {
+  width: 1300px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.block-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  .label {
+    font-family: $font-primary;
+    font-weight: bold;
+    font-size: 14px;
+    color: $color-text;
+    margin-bottom: 5px;
+  }
+
+  .input {
+    border: 1px solid $color-primary;
+    border-radius: 20px;
+    width: 300px;
+    height: 35px;
+    padding: 0 15px;
+    outline: none !important;
+    text-align: left;
+    font-family: $font-primary;
+    font-size: 14px;
+  }
+
+  .input-password {
+    display: flex;
+    align-items: center;
+
+    .material-icons {
+      margin-left: -50px;
+      cursor: pointer;
+      color: $color-hoverPrimary;
+    }
+  }
+}
+
+.submit {
+  border: 1px solid $color-primary;
+  border-radius: 20px;
+  padding: 5px 12px;
+  margin-left: 10px;
+  color: $color-primary;
+  font-family: $font-primary;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.submit--login {
+  background-color: $color-primary;
+  color: white;
+
+  &:hover {
+    background-color: $color-hoverPrimary;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.submit--register:hover {
+  background-color: $color-hoverSecondary;
+  cursor: pointer;
+}

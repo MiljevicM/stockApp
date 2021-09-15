@@ -1,0 +1,17 @@
+<form class="login">
+  <div class="block-input">
+    <label for="username" class="label">Username:</label>
+    <input type="text" id="username" name="username" class="input" />
+  </div>
+  <div class="block-input">
+    <label for="pass" class="label">Password:</label>
+    <div class="input-password">
+      <input type="password" id="pass" name="password" class="input" [type]="hide ? 'password' : 'text'" />
+      <span class="material-icons" (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</span>
+    </div>
+  </div>
+  <div class="block-submit">
+    <input type="submit" class="submit submit--login" value="Login" />
+    <input type="submit" class="submit submit--register" value="Register" />
+  </div>
+</form>
