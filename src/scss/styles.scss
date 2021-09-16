@@ -1,33 +1,39 @@
 @import "_mixins.scss";
 
-.login {
+.login-page {
   width: 1300px;
   height: 100vh;
   margin: 0 auto;
 }
 
-.block-input {
+.login-block {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 
   .label {
     font-family: $font-primary;
+    color: $color-text;
+  }
+
+  .label--login {
     font-weight: bold;
     font-size: 14px;
-    color: $color-text;
     margin-bottom: 5px;
   }
 
   .input {
     border: 1px solid $color-primary;
     border-radius: 20px;
-    width: 300px;
-    height: 35px;
-    padding: 0 15px;
     outline: none !important;
     text-align: left;
     font-family: $font-primary;
+  }
+
+  .input--login {
+    width: 300px;
+    height: 35px;
+    padding: 0 15px;
     font-size: 14px;
   }
 

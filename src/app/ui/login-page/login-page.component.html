@@ -1,16 +1,16 @@
-<form class="login">
-  <div class="block-input">
-    <label for="username" class="label">Username:</label>
-    <input type="text" id="username" name="username" class="input" />
+<form class="login-page">
+  <div class="login-block">
+    <label for="username" class="label label--login">Username:</label>
+    <input type="text" id="username" name="username" class="input input--login" />
   </div>
-  <div class="block-input">
-    <label for="pass" class="label">Password:</label>
+  <div class="login-block">
+    <label for="pass" class="label label--login">Password:</label>
     <div class="input-password">
-      <input type="password" id="pass" name="password" class="input" [type]="hide ? 'password' : 'text'" />
+      <input type="password" id="pass" name="password" class="input input--login" [type]="hide ? 'password' : 'text'" />
       <span class="material-icons" (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</span>
     </div>
   </div>
-  <div class="block-submit">
+  <div class="loginBlock-submit">
     <input type="submit" class="submit submit--login" value="Login" />
     <input type="submit" class="submit submit--register" value="Register" />
   </div>
