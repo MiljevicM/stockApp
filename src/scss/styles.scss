@@ -99,18 +99,40 @@
     }
   }
 
-  .table-body th{
+  .table-body th {
     font-weight: normal;
     color: black;
     padding-left: 15px;
   }
 
+  .th-edit {
+    .material-icons {
+      cursor: pointer;
+      margin-right: 15px;
+
+      &.green {
+        color: limegreen;
+      }
+
+      &.blue {
+        color: $color-primary;
+      }
+
+      &.red {
+        color: red;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
   .row {
-    height: 36px;
+    height: 44px;
 
     &:hover {
       background-color: $color-hoverTable;
-      cursor: pointer;
     }
   }
   .row--grey {
@@ -229,5 +251,3 @@
 .th-no {
   width: 150px;
 }
-
-

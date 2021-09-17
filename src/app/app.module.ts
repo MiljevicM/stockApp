@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { UiComponent } from './ui/ui.component';
 import { LoginPageComponent } from './ui/login-page/login-page.component';
 import { InvoicesPageComponent } from './ui/invoices-page/invoices-page.component';
+import { StockPageComponent } from './ui/stock-page/stock-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UiComponent,
     LoginPageComponent,
-    InvoicesPageComponent
+    InvoicesPageComponent,
+    StockPageComponent
   ],
   imports: [
     BrowserModule,
