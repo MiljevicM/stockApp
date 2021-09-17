@@ -1,53 +1,31 @@
 @import "_mixins.scss";
 
-.login-page {
-  width: 1300px;
+/*----REUSABLE----*/
+
+.container {
+  width: 1200px;
   height: 100vh;
   margin: 0 auto;
 }
 
-.login-block {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-
-  .label {
-    font-family: $font-primary;
-    color: $color-text;
-  }
-
-  .label--login {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  .input {
-    border: 1px solid $color-primary;
-    border-radius: 20px;
-    outline: none !important;
-    text-align: left;
-    font-family: $font-primary;
-  }
-
-  .input--login {
-    width: 300px;
-    height: 35px;
-    padding: 0 15px;
-    font-size: 14px;
-  }
-
-  .input-password {
-    display: flex;
-    align-items: center;
-
-    .material-icons {
-      margin-left: -50px;
-      cursor: pointer;
-      color: $color-hoverPrimary;
-    }
-  }
+.label {
+  font-family: $font-primary;
+  color: $color-text;
+  font-weight: bold;
+  font-size: 14px;
 }
+
+.input {
+  border: 1px solid $color-primary;
+  border-radius: 20px;
+  outline: none !important;
+  text-align: left;
+  font-family: $font-primary;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+/*---SUBMIT BUTTON-----*/
 
 .submit {
   border: 1px solid $color-primary;
@@ -77,3 +55,179 @@
   background-color: $color-hoverSecondary;
   cursor: pointer;
 }
+
+/*----BUTTON----*/
+
+.button {
+  border: 1px solid $color-primary;
+  border-radius: 20px;
+  padding: 5px 12px;
+  color: $color-primary;
+  font-family: $font-primary;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.button--fill {
+  background-color: $color-primary;
+  color: white;
+
+  &:hover {
+    background-color: $color-hoverPrimary;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/*----TABLE----*/
+
+.table {
+  font-family: $font-primary;
+  color: $color-text;
+  font-size: 14px;
+  border-collapse: collapse;
+  text-align: left;
+
+  .table-header {
+    height: 54px;
+    border-bottom: 2px solid $color-primary;
+
+    & th {
+      padding-left: 15px;
+    }
+  }
+
+  .table-body th{
+    font-weight: normal;
+    color: black;
+    padding-left: 15px;
+  }
+
+  .row {
+    height: 36px;
+
+    &:hover {
+      background-color: $color-hoverTable;
+      cursor: pointer;
+    }
+  }
+  .row--grey {
+    background-color: $color-rowTable;
+  }
+}
+
+/*----LOGIN PAGE----*/
+
+.login-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  .label--login {
+    margin-bottom: 5px;
+  }
+
+  .input--login {
+    width: 300px;
+    height: 35px;
+  }
+
+  .input-password {
+    display: flex;
+    align-items: center;
+
+    .material-icons {
+      margin-left: -50px;
+      cursor: pointer;
+      color: $color-hoverPrimary;
+    }
+  }
+}
+
+/*----INVOICES PAGE----*/
+
+.invTittle-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-family: $font-primary;
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+
+  .invTittle {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+    padding-bottom: 10px;
+  }
+
+  .invTittle--left {
+    width: 75%;
+  }
+  .invTittle--right {
+    width: 22%;
+  }
+}
+
+.invFirst-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .invSearch-section {
+    display: flex;
+    flex-direction: row;
+
+    .search-block {
+      margin-right: 40px;
+    }
+
+    .label--invoices {
+      margin-right: 10px;
+    }
+
+    .input--invoices {
+      width: 180px;
+      height: 30px;
+    }
+
+    .input--invoices--date {
+      width: 170px;
+      height: 30px;
+    }
+
+    .input--invoices--number {
+      width: 80px;
+      height: 30px;
+    }
+  }
+
+  .invButton-section {
+    width: 22%;
+  }
+}
+
+.invTable-section {
+  display: flex;
+  margin-top: 70px;
+
+  .table--invoices {
+    width: 100%;
+  }
+}
+
+.th-name {
+  width: 800px;
+}
+
+.th-date {
+  width: 350px;
+}
+
+.th-no {
+  width: 150px;
+}
+
+

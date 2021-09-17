@@ -1,1 +1,71 @@
-<p>invoices-page works!</p>
+<div class="container">
+  <div class="invTittle-section">
+    <div class="invTittle invTittle--left">Search invoices</div>
+    <div class="invTittle invTittle--right">Create a new invoice</div>
+  </div>
+  <div class="invFirst-section">
+    <form>
+      <div class="invSearch-section">
+        <div class="search-block">
+          <label for="name" class="label label--invoices">Company Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="input input--invoices"
+          />
+        </div>
+        <div class="search-block">
+          <label for="date" class="label label--invoices">Date:</label>
+          <input
+            type="month"
+            id="date"
+            name="date"
+            min="2021-01"
+            class="input input--invoices--date"
+          />
+        </div>
+        <div class="search-block">
+          <label for="number" class="label label--invoices">Invoice No.:</label>
+          <input
+            type="number"
+            id="number"
+            name="number"
+            class="input input--invoices--number"
+          />
+        </div>
+      </div>
+    </form>
+    <div class="invButton-section">
+      <button class="button button--fill">Create Invoice</button>
+    </div>
+  </div>
+  <div class="invTable-section">
+    <table class="table table--invoices">
+      <thead class="table-header">
+        <tr>
+          <th class="th-name">Company Name</th>
+          <th class="th-date">Date</th>
+          <th class="th-no">Invoice No.</th>
+        </tr>
+      </thead>
+      <tbody class="table-body">
+        <tr class="row row--grey">
+          <th>Example company</th>
+          <th>10.08.2021.</th>
+          <th>354</th>
+        </tr>
+        <tr class="row row--white">
+          <th>#</th>
+          <th>#</th>
+          <th>#</th>
+        </tr>
+        <tr class="row row--grey">
+          <th>#</th>
+          <th>#</th>
+          <th>#</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
