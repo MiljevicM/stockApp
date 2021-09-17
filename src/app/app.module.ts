@@ -7,6 +7,7 @@ import { UiComponent } from './ui/ui.component';
 import { LoginPageComponent } from './ui/login-page/login-page.component';
 import { InvoicesPageComponent } from './ui/invoices-page/invoices-page.component';
 import { StockPageComponent } from './ui/stock-page/stock-page.component';
+import { SalesPageComponent } from './ui/sales-page/sales-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StockPageComponent } from './ui/stock-page/stock-page.component';
     UiComponent,
     LoginPageComponent,
     InvoicesPageComponent,
-    StockPageComponent
+    StockPageComponent,
+    SalesPageComponent
   ],
   imports: [
     BrowserModule,

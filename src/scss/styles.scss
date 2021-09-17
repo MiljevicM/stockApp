@@ -140,6 +140,98 @@
   }
 }
 
+/*----TABLE SECTION----*/
+
+.table-section {
+  display: flex;
+  margin-top: 70px;
+
+  .table--standard {
+    width: 100%;
+  }
+}
+
+.th-name {
+  width: 800px;
+}
+
+.th-date {
+  width: 350px;
+}
+
+.th-no {
+  width: 150px;
+}
+
+/*----TITTLE----*/
+
+.tittle-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-family: $font-primary;
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+
+  .tittle {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+    padding-bottom: 10px;
+  }
+
+  .tittle--left {
+    width: 75%;
+  }
+  .tittle--right {
+    width: 22%;
+  }
+
+  .tittle--fullWidth {
+    width: 100%;
+  }
+}
+
+/*----FIRST SECTION----*/
+
+.first-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .search-section {
+    display: flex;
+    flex-direction: row;
+
+    .search-block {
+      margin-right: 40px;
+    }
+
+    .label--standard {
+      margin-right: 10px;
+    }
+
+    .input--standard {
+      width: 180px;
+      height: 30px;
+    }
+
+    .input--standard--date {
+      width: 170px;
+      height: 30px;
+    }
+
+    .input--standard--number {
+      width: 80px;
+      height: 30px;
+    }
+  }
+
+  .buttonStandard-section {
+    width: 22%;
+  }
+}
+
 /*----LOGIN PAGE----*/
 
 .login-block {
@@ -168,86 +260,27 @@
   }
 }
 
-/*----INVOICES PAGE----*/
+/*----SALES PAGE----*/
 
-.invTittle-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  font-family: $font-primary;
-  color: black;
-  font-weight: normal;
-  font-size: 14px;
-
-  .invTittle {
-    border-bottom: 1px solid rgba(112, 112, 112, 0.2);
-    padding-bottom: 10px;
-  }
-
-  .invTittle--left {
-    width: 75%;
-  }
-  .invTittle--right {
-    width: 22%;
-  }
-}
-
-.invFirst-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  .invSearch-section {
-    display: flex;
-    flex-direction: row;
-
-    .search-block {
-      margin-right: 40px;
-    }
-
-    .label--invoices {
-      margin-right: 10px;
-    }
-
-    .input--invoices {
-      width: 180px;
-      height: 30px;
-    }
-
-    .input--invoices--date {
-      width: 170px;
-      height: 30px;
-    }
-
-    .input--invoices--number {
-      width: 80px;
-      height: 30px;
-    }
-  }
-
-  .invButton-section {
-    width: 22%;
-  }
-}
-
-.invTable-section {
+.salesTable-section {
   display: flex;
   margin-top: 70px;
 
-  .table--invoices {
+  .table--standard {
     width: 100%;
   }
 }
 
 .th-name {
-  width: 800px;
+  width: 600px;
 }
 
 .th-date {
-  width: 350px;
+  width: 300px;
 }
 
 .th-no {
-  width: 150px;
+  width: 200px;
 }
+
+

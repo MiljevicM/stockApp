@@ -1,3 +1,4 @@
+import { SalesPageComponent } from './ui/sales-page/sales-page.component';
 import { StockPageComponent } from './ui/stock-page/stock-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,7 +8,8 @@ import { LoginPageComponent } from './ui/login-page/login-page.component';
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'invoices', component: InvoicesPageComponent },
-  { path: 'stock', component: StockPageComponent }
+  { path: 'stock', component: StockPageComponent },
+  { path: 'sales', component: SalesPageComponent }
 ];
 
 @NgModule({
