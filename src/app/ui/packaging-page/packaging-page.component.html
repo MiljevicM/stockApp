@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="tittle-section">
+    <div class="tittle tittle--left">Search {{ selectedList }}</div>
+    <div class="tittle tittle--right">Add new {{ selectedList }}</div>
+  </div>
+  <div class="first-section">
+    <form>
+      <div class="search-section">
+        <div class="search-block">
+          <label for="name" class="label label--standard"
+            >{{ selectedList }} Name:</label
+          >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="input input--standard"
+          />
+        </div>
+      </div>
+    </form>
+    <div class="buttonStandard-section">
+      <button class="button button--fill">Add new</button>
+    </div>
+  </div>
+  <div class="table-tabs">
+    <ul>
+      <li *ngFor="let menuList of menuLists">
+        <a
+          (click)="openMenuList(menuList)"
+          [ngClass]="{ active: selectedList === menuList }"
+          >{{ menuList }}</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="packTable-section" *ngIf="selectedList === 'Packaging'">
+    <table class="table table--standard">
+      <thead class="table-header">
+        <tr>
+          <th class="th-name">Product Name</th>
+          <th class="th-date">In Stock</th>
+          <th class="th-no"></th>
+        </tr>
+      </thead>
+      <tbody class="table-body">
+        <tr class="row row--grey">
+          <th>Example product</th>
+          <th>3456</th>
+          <th class="th-edit">
+            <span class="material-icons green">add_circle_outline</span>
+            <span class="material-icons blue">remove_circle_outline</span>
+            <span class="material-icons red">highlight_off</span>
+          </th>
+        </tr>
+        <tr class="row row--white">
+          <th>#</th>
+          <th>#</th>
+          <th class="th-edit">
+            <span class="material-icons green">add_circle_outline</span>
+            <span class="material-icons blue">remove_circle_outline</span>
+            <span class="material-icons red">highlight_off</span>
+          </th>
+        </tr>
+        <tr class="row row--grey">
+          <th>#</th>
+          <th>#</th>
+          <th class="th-edit">
+            <span class="material-icons green">add_circle_outline</span>
+            <span class="material-icons blue">remove_circle_outline</span>
+            <span class="material-icons red">highlight_off</span>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="selectedList === 'Covers'">Table 2.</div>
+  <div *ngIf="selectedList === 'Labels'">Table 3.</div>
+  <div *ngIf="selectedList === 'Boxes'">Table 4.</div>
+  <div *ngIf="selectedList === 'Other'">Table 5.</div>
+</div>

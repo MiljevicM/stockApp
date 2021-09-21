@@ -145,10 +145,10 @@
 .table-section {
   display: flex;
   margin-top: 70px;
+}
 
-  .table--standard {
-    width: 100%;
-  }
+.table--standard {
+  width: 100%;
 }
 
 .th-name {
@@ -265,10 +265,6 @@
 .salesTable-section {
   display: flex;
   margin-top: 70px;
-
-  .table--standard {
-    width: 100%;
-  }
 }
 
 .th-name {
@@ -283,4 +279,43 @@
   width: 200px;
 }
 
+/*----PACKAGING PAGE----*/
 
+.table-tabs {
+  display: flex;
+  align-items: center;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 70px;
+  height: 54px;
+  background: $color-primary;
+  color: white;
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    & li {
+      .active {
+        background-color: white;
+        color: $color-primary;
+        cursor: pointer;
+        padding: 26px 5px;
+      }
+
+      & a {
+        margin-right: 25px;
+        padding: 26px 5px;
+
+        &:hover {
+          background-color: white;
+          color: $color-primary;
+          cursor: pointer;
+          padding: 26px 5px;
+        }
+      }
+    }
+  }
+}

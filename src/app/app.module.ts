@@ -8,6 +8,7 @@ import { LoginPageComponent } from './ui/login-page/login-page.component';
 import { InvoicesPageComponent } from './ui/invoices-page/invoices-page.component';
 import { StockPageComponent } from './ui/stock-page/stock-page.component';
 import { SalesPageComponent } from './ui/sales-page/sales-page.component';
+import { PackagingPageComponent } from './ui/packaging-page/packaging-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SalesPageComponent } from './ui/sales-page/sales-page.component';
     LoginPageComponent,
     InvoicesPageComponent,
     StockPageComponent,
-    SalesPageComponent
+    SalesPageComponent,
+    PackagingPageComponent
   ],
   imports: [
     BrowserModule,
