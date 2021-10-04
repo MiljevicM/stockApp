@@ -1,81 +1,74 @@
-<div class="container">
-  <div class="tittle-section">
-    <div class="tittle tittle--left">Search {{ selectedList }}</div>
-    <div class="tittle tittle--right">Add new {{ selectedList }}</div>
-  </div>
-  <div class="first-section">
-    <form>
-      <div class="search-section">
-        <div class="search-block">
-          <label for="name" class="label label--standard"
-            >{{ selectedList }} Name:</label
-          >
-          <input
-            type="text"
-            name="name"
-            id="name"
-            class="input input--standard"
-          />
-        </div>
+<section class="container">
+  <header class="_search-header">
+    <p class="_tittle tittle--left">Search {{ selectedList }}</p>
+    <p class="_tittle tittle--right">Add new {{ selectedList }}</p>
+  </header>
+  <main>
+    <section class="_main-bar">
+      <form action="" class="_search-section">
+        <fieldset class="_f">
+          <label for="name" class="_f_label">{{ selectedList }} Name:</label>
+          <input type="text" name="name" id="name" class="_input input-main" />
+        </fieldset>
+      </form>
+      <div class="_button-area">
+        <button class="button button--fill">Add new</button>
       </div>
-    </form>
-    <div class="buttonStandard-section">
-      <button class="button button--fill">Add new</button>
-    </div>
-  </div>
-  <div class="table-tabs">
-    <ul>
-      <li *ngFor="let menuList of menuLists">
-        <a
-          (click)="openMenuList(menuList)"
-          [ngClass]="{ active: selectedList === menuList }"
-          >{{ menuList }}</a
-        >
-      </li>
-    </ul>
-  </div>
-  <div class="packTable-section" *ngIf="selectedList === 'Packaging'">
-    <table class="table table--standard">
-      <thead class="table-header">
-        <tr>
-          <th class="th-name">Product Name</th>
-          <th class="th-date">In Stock</th>
-          <th class="th-no"></th>
-        </tr>
-      </thead>
-      <tbody class="table-body">
-        <tr class="row row--grey">
-          <th>Example product</th>
-          <th>3456</th>
-          <th class="th-edit">
-            <span class="material-icons green">add_circle_outline</span>
-            <span class="material-icons blue">remove_circle_outline</span>
-            <span class="material-icons red">highlight_off</span>
-          </th>
-        </tr>
-        <tr class="row row--white">
-          <th>#</th>
-          <th>#</th>
-          <th class="th-edit">
-            <span class="material-icons green">add_circle_outline</span>
-            <span class="material-icons blue">remove_circle_outline</span>
-            <span class="material-icons red">highlight_off</span>
-          </th>
-        </tr>
-        <tr class="row row--grey">
-          <th>#</th>
-          <th>#</th>
-          <th class="th-edit">
-            <span class="material-icons green">add_circle_outline</span>
-            <span class="material-icons blue">remove_circle_outline</span>
-            <span class="material-icons red">highlight_off</span>
-          </th>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div *ngIf="selectedList === 'Covers'">Table 2.</div>
-  <div *ngIf="selectedList === 'Labels'">Table 3.</div>
-  <div *ngIf="selectedList === 'Boxes'">Table 4.</div>
-  <div *ngIf="selectedList === 'Other'">Table 5.</div>
-</div>
+    </section>
+    <section class="_tabs-area">
+      <ul class="_tabs">
+        <li class="_tabs_li" *ngFor="let menuList of menuLists">
+          <a
+            class="_tabs_a"
+            (click)="openMenuList(menuList)"
+            [ngClass]="{ active: selectedList === menuList }"
+            >{{ menuList }}</a
+          >
+        </li>
+      </ul>
+    </section>
+    <section
+      class="_table-area table-area--packaging"
+      *ngIf="selectedList === 'Packaging'"
+    >
+      <table class="_table">
+        <thead class="_table_thead">
+          <tr>
+            <th class="_table_th table_th--name">Product Name</th>
+            <th class="_table_th table_th--date">In Stock</th>
+            <th class="_table_th table_th--no"></th>
+          </tr>
+        </thead>
+        <tbody class="_table_tbody">
+          <tr class="_table_tr table_tr--grey">
+            <th class="_table_th">Example product</th>
+            <th class="_table_th">3456</th>
+            <th class="_table_th--mi">
+              <span class="material-icons green">add_circle_outline</span>
+              <span class="material-icons blue">remove_circle_outline</span>
+              <span class="material-icons red">highlight_off</span>
+            </th>
+          </tr>
+          <tr class="_table_tr">
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+            <th class="_table_th--mi">
+              <span class="material-icons green">add_circle_outline</span>
+              <span class="material-icons blue">remove_circle_outline</span>
+              <span class="material-icons red">highlight_off</span>
+            </th>
+          </tr>
+          <tr class="_table_tr table_tr--grey">
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+            <th class="_table_th--mi">
+              <span class="material-icons green">add_circle_outline</span>
+              <span class="material-icons blue">remove_circle_outline</span>
+              <span class="material-icons red">highlight_off</span>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</section>

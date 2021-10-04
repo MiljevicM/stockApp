@@ -1,63 +1,57 @@
-<div class="container">
-    <div class="tittle-section">
-      <div class="tittle tittle--fullWidth">Search products</div>
-    </div>
-    <div class="first-section">
-      <form>
-        <div class="search-section">
-          <div class="search-block">
-            <label for="name" class="label label--standard">Product Name:</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              class="input input--standard"
-            />
-          </div>
-          <div class="search-block">
-            <label for="date" class="label label--standard">Date:</label>
-            <input
-              type="month"
-              id="date"
-              name="date"
-              min="2021-01"
-              class="input input--standard--date"
-            />
-          </div>
-        </div>
+<section class="container">
+  <header class="_search-header">
+    <p class="_tittle">Search products</p>
+  </header>
+  <main>
+    <section class="_main-bar">
+      <form action="" class="_search-section">
+        <fieldset class="_f">
+          <label for="name" class="_f_label">Product Name:</label>
+          <input type="text" name="name" id="name" class="_input input-main" />
+        </fieldset>
+        <fieldset class="_f">
+          <label for="date" class="_f_label">Date:</label>
+          <input
+            type="month"
+            id="date"
+            name="date"
+            min="2021-01"
+            class="_input input-date"
+          />
+        </fieldset>
       </form>
-    </div>
-    <div class="salesTable-section">
-      <table class="table table--standard">
-        <thead class="table-header">
+    </section>
+    <section class="_table-area">
+      <table class="_table">
+        <thead class="_table_thead">
           <tr>
-            <th class="th-name">Product Name</th>
-            <th class="th-date">Date</th>
-            <th class="th-no">Produced</th>
-            <th class="th-no">Sold</th>
+            <th class="_table_th table_th--name">Product Name</th>
+            <th class="_table_th table_th--date">Date</th>
+            <th class="_table_th table_th--no">Produced</th>
+            <th class="_table_th table_th--no">Sold</th>
           </tr>
         </thead>
-        <tbody class="table-body">
-          <tr class="row row--grey">
-            <th>Example product</th>
-            <th>June 2021</th>
-            <th>3540</th>
-            <th>1528</th>
+        <tbody class="_table_tbody">
+          <tr class="_table_tr table_tr--grey">
+            <th class="_table_th">Example product</th>
+            <th class="_table_th">June 2021</th>
+            <th class="_table_th">3540</th>
+            <th class="_table_th">1528</th>
           </tr>
-          <tr class="row row--white">
-            <th>#</th>
-            <th>#</th>
-            <th>#</th>
-            <th>#</th>
+          <tr class="_table_tr">
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
           </tr>
-          <tr class="row row--grey">
-            <th>#</th>
-            <th>#</th>
-            <th>#</th>
-            <th>#</th>
+          <tr class="_table_tr table_tr--grey">
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-  
+    </section>
+  </main>
+</section>

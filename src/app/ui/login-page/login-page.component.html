@@ -1,32 +1,34 @@
-<div class="container">
-  <form>
-    <div class="login-block">
-      <label for="username" class="label label--login">Username:</label>
-      <input
-        type="text"
-        id="username"
-        name="username"
-        class="input input--login"
-      />
-    </div>
-    <div class="login-block">
-      <label for="pass" class="label label--login">Password:</label>
-      <div class="input-password">
+<section class="container">
+  <main>
+    <form action="">
+      <fieldset class="_f f--login">
+        <label for="username" class="_f_label--login">Username:</label>
         <input
-          type="password"
-          id="pass"
-          name="password"
-          class="input input--login"
-          [type]="hide ? 'password' : 'text'"
+          type="text"
+          id="username"
+          name="username"
+          class="_input input--login"
         />
-        <span class="material-icons" (click)="hide = !hide">{{
-          hide ? "visibility_off" : "visibility"
-        }}</span>
-      </div>
+      </fieldset>
+      <fieldset class="_f f--login">
+        <label for="pass" class="_f_label--login">Password:</label>
+        <div class="input-password">
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            class="_input input--login"
+            [type]="hide ? 'password' : 'text'"
+          />
+          <span class="material-icons" (click)="hide = !hide">{{
+            hide ? "visibility_off" : "visibility"
+          }}</span>
+        </div>
+      </fieldset>
+    </form>
+    <div>
+      <button class="button button--fill--login">Login</button>
+      <button class="button button--register">Register</button>
     </div>
-    <div class="loginBlock-submit">
-      <input type="submit" class="submit submit--login" value="Login" />
-      <input type="submit" class="submit submit--register" value="Register" />
-    </div>
-  </form>
-</div>
+  </main>
+</section>

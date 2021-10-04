@@ -9,6 +9,7 @@ import { InvoicesPageComponent } from './ui/invoices-page/invoices-page.componen
 import { StockPageComponent } from './ui/stock-page/stock-page.component';
 import { SalesPageComponent } from './ui/sales-page/sales-page.component';
 import { PackagingPageComponent } from './ui/packaging-page/packaging-page.component';
+import { ModalModule } from 'angular-custom-modal';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PackagingPageComponent } from './ui/packaging-page/packaging-page.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

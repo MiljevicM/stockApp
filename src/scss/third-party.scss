@@ -1,0 +1,26 @@
+@import "_mixins.scss";
+
+._table_th--mi {
+  .material-icons {
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 0;
+    transition: 0.2s;
+
+    &.green {
+      color: limegreen;
+    }
+
+    &.blue {
+      color: $color-primary;
+    }
+
+    &.red {
+      color: red;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

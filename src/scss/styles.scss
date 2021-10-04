@@ -1,67 +1,42 @@
+// Basic
+@import "reset.scss";
+
+// Third-party
+@import "third-party.scss";
+
+// Mixins
 @import "_mixins.scss";
 
 /*----REUSABLE----*/
 
 .container {
   width: 1200px;
-  height: 100vh;
   margin: 0 auto;
 }
 
-.label {
+._f {
+  margin-right: 40px;
   font-family: $font-primary;
   color: $color-text;
   font-weight: bold;
   font-size: 14px;
 }
 
-.input {
-  border: 1px solid $color-primary;
-  border-radius: 20px;
-  outline: none !important;
-  text-align: left;
-  font-family: $font-primary;
+._input {
   padding: 0 15px;
-  font-size: 14px;
-}
-
-/*---SUBMIT BUTTON-----*/
-
-.submit {
   border: 1px solid $color-primary;
   border-radius: 20px;
-  padding: 5px 12px;
-  margin-left: 10px;
-  color: $color-primary;
   font-family: $font-primary;
-  font-weight: bold;
+  text-align: left;
   font-size: 14px;
-  background-color: white;
-  text-transform: uppercase;
-}
-
-.submit--login {
-  background-color: $color-primary;
-  color: white;
-
-  &:hover {
-    background-color: $color-hoverPrimary;
-    color: white;
-    cursor: pointer;
-  }
-}
-
-.submit--register:hover {
-  background-color: $color-hoverSecondary;
-  cursor: pointer;
 }
 
 /*----BUTTON----*/
 
 .button {
+  padding: 5px 12px;
   border: 1px solid $color-primary;
   border-radius: 20px;
-  padding: 5px 12px;
   color: $color-primary;
   font-family: $font-primary;
   font-weight: bold;
@@ -83,89 +58,67 @@
 
 /*----TABLE----*/
 
-.table {
+._table {
+  width: 100%;
+  text-align: left;
   font-family: $font-primary;
   color: $color-text;
   font-size: 14px;
-  border-collapse: collapse;
-  text-align: left;
 
-  .table-header {
+  ._table_thead {
     height: 54px;
     border-bottom: 2px solid $color-primary;
 
-    & th {
+    ._table_th {
       padding-left: 15px;
     }
   }
 
-  .table-body th {
-    font-weight: normal;
-    color: black;
-    padding-left: 15px;
-  }
-
-  .th-edit {
-    .material-icons {
-      cursor: pointer;
-      margin-right: 15px;
-
-      &.green {
-        color: limegreen;
-      }
-
-      &.blue {
-        color: $color-primary;
-      }
-
-      &.red {
-        color: red;
-      }
+  ._table_tbody {
+    ._table_tr {
+      height: 44px;
 
       &:hover {
-        transform: scale(1.2);
+        background-color: $color-hoverTable;
       }
     }
-  }
 
-  .row {
-    height: 44px;
-
-    &:hover {
-      background-color: $color-hoverTable;
+    .table_tr--grey {
+      background-color: $color-rowTable;
     }
-  }
-  .row--grey {
-    background-color: $color-rowTable;
+
+    ._table_th {
+      padding-left: 15px;
+      font-weight: normal;
+      color: black;
+    }
   }
 }
 
 /*----TABLE SECTION----*/
 
-.table-section {
+._table-area {
   display: flex;
   margin-top: 70px;
 }
 
-.table--standard {
-  width: 100%;
-}
-
-.th-name {
+.table_th--name {
   width: 800px;
 }
 
-.th-date {
+.table_th--date {
   width: 350px;
+  padding-left: 15px;
 }
 
-.th-no {
+.table_th--no {
   width: 150px;
+  padding-left: 15px;
 }
 
 /*----TITTLE----*/
 
-.tittle-section {
+._search-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -175,71 +128,64 @@
   font-weight: normal;
   font-size: 14px;
 
-  .tittle {
+  ._tittle {
+    width: 100%;
     border-bottom: 1px solid rgba(112, 112, 112, 0.2);
     padding-bottom: 10px;
-  }
 
-  .tittle--left {
-    width: 75%;
-  }
-  .tittle--right {
-    width: 22%;
-  }
-
-  .tittle--fullWidth {
-    width: 100%;
+    &.tittle--left {
+      width: 75%;
+    }
+    &.tittle--right {
+      width: 22%;
+    }
   }
 }
 
 /*----FIRST SECTION----*/
 
-.first-section {
+._main-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  .search-section {
+  ._search-section {
     display: flex;
     flex-direction: row;
 
-    .search-block {
-      margin-right: 40px;
-    }
-
-    .label--standard {
+    ._f_label {
       margin-right: 10px;
     }
 
-    .input--standard {
+    .input-main {
       width: 180px;
       height: 30px;
     }
 
-    .input--standard--date {
+    .input-date {
       width: 170px;
       height: 30px;
     }
 
-    .input--standard--number {
+    .input-number {
       width: 80px;
       height: 30px;
     }
   }
 
-  .buttonStandard-section {
+  ._button-area {
     width: 22%;
   }
 }
 
 /*----LOGIN PAGE----*/
 
-.login-block {
+.f--login {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 
-  .label--login {
+  ._f_label--login {
     margin-bottom: 5px;
   }
 
@@ -254,68 +200,70 @@
 
     .material-icons {
       margin-left: -50px;
-      cursor: pointer;
       color: $color-hoverPrimary;
+      cursor: pointer;
     }
   }
 }
 
-/*----SALES PAGE----*/
+.button--fill--login {
+  margin-right: 10px;
+  background-color: $color-primary;
+  color: white;
 
-.salesTable-section {
-  display: flex;
-  margin-top: 70px;
+  &:hover {
+    background-color: $color-hoverPrimary;
+    color: white;
+    cursor: pointer;
+  }
 }
 
-.th-name {
-  width: 600px;
-}
-
-.th-date {
-  width: 300px;
-}
-
-.th-no {
-  width: 200px;
+.button--register:hover {
+  background-color: $color-hoverSecondary;
+  cursor: pointer;
 }
 
 /*----PACKAGING PAGE----*/
 
-.table-tabs {
+._tabs-area {
   display: flex;
   align-items: center;
+  height: 54px;
+  margin-top: 70px;
   font-family: $font-primary;
   font-size: 14px;
   font-weight: bold;
-  margin-top: 70px;
-  height: 54px;
   background: $color-primary;
   color: white;
 
-  & ul {
+  ._tabs {
     display: flex;
     flex-direction: row;
     list-style-type: none;
 
-    & li {
+    ._tabs_li {
       .active {
+        padding: 26px 5px;
         background-color: white;
         color: $color-primary;
         cursor: pointer;
-        padding: 26px 5px;
       }
 
-      & a {
-        margin-right: 25px;
+      ._tabs_a {
         padding: 26px 5px;
+        margin-right: 25px;
 
         &:hover {
-          background-color: white;
-          color: $color-primary;
-          cursor: pointer;
           padding: 26px 5px;
+          color: $color-primary;
+          background-color: white;
+          cursor: pointer;
         }
       }
     }
   }
+}
+
+.table-area--packaging {
+  margin-top: 0;
 }

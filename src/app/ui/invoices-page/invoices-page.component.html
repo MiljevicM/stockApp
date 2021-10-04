@@ -1,71 +1,66 @@
-<div class="container">
-  <div class="tittle-section">
-    <div class="tittle tittle--left">Search invoices</div>
-    <div class="tittle tittle--right">Create a new invoice</div>
-  </div>
-  <div class="first-section">
-    <form>
-      <div class="search-section">
-        <div class="search-block">
-          <label for="name" class="label label--standard ">Company Name:</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            class="input input--standard"
-          />
-        </div>
-        <div class="search-block">
-          <label for="date" class="label label--standard ">Date:</label>
+<section class="container">
+  <header class="_search-header">
+    <p class="_tittle tittle--left">Search invoices</p>
+    <p class="_tittle tittle--right">Create a new invoice</p>
+  </header>
+  <main>
+    <section class="_main-bar">
+      <form action="" class="_search-section">
+        <fieldset class="_f">
+          <label for="name" class="_f_label">Company Name:</label>
+          <input type="text" name="name" id="name" class="_input input-main" />
+        </fieldset>
+        <fieldset class="_f">
+          <label for="date" class="_f_label">Date:</label>
           <input
             type="month"
             id="date"
             name="date"
             min="2021-01"
-            class="input input--standard--date"
+            class="_input input-date"
           />
-        </div>
-        <div class="search-block">
-          <label for="number" class="label label--standard ">Invoice No.:</label>
+        </fieldset>
+        <fieldset class="_f">
+          <label for="number" class="_f_label">Invoice No.:</label>
           <input
             type="number"
             id="number"
             name="number"
-            class="input input--standard--number"
+            class="_input input-number"
           />
-        </div>
+        </fieldset>
+      </form>
+      <div class="_button-area">
+        <button class="button button--fill">Create Invoice</button>
       </div>
-    </form>
-    <div class="buttonStandard-section">
-      <button class="button button--fill">Create Invoice</button>
-    </div>
-  </div>
-  <div class="table-section">
-    <table class="table table--standard">
-      <thead class="table-header">
-        <tr>
-          <th class="th-name">Company Name</th>
-          <th class="th-date">Date</th>
-          <th class="th-no">Invoice No.</th>
-        </tr>
-      </thead>
-      <tbody class="table-body">
-        <tr class="row row--grey">
-          <th>Example company</th>
-          <th>10.08.2021.</th>
-          <th>354</th>
-        </tr>
-        <tr class="row row--white">
-          <th>#</th>
-          <th>#</th>
-          <th>#</th>
-        </tr>
-        <tr class="row row--grey">
-          <th>#</th>
-          <th>#</th>
-          <th>#</th>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+    </section>
+    <section class="_table-area">
+      <table class="_table">
+        <thead class="_table_thead">
+          <tr>
+            <th class="_table_th table_th--name">Company Name</th>
+            <th class="_table_th table_th--date">Date</th>
+            <th class="_table_th table_th--no">Invoice No.</th>
+          </tr>
+        </thead>
+        <tbody class="_table_tbody">
+          <tr class="_table_tr table_tr--grey">
+            <th class="_table_th">Example company</th>
+            <th class="_table_th">10.08.2021.</th>
+            <th class="_table_th">354</th>
+          </tr>
+          <tr class="_table_tr">
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+          </tr>
+          <tr class="_table_tr table_tr--grey">
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+            <th class="_table_th">#</th>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</section>
