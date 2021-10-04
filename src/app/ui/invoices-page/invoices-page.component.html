@@ -8,7 +8,7 @@
       <form action="" class="_search-section">
         <fieldset class="_f">
           <label for="name" class="_f_label">Company Name:</label>
-          <input type="text" name="name" id="name" class="_input input-main" />
+          <input type="text" name="name" id="name" class="_input input-main" aria-label="type company name" />
         </fieldset>
         <fieldset class="_f">
           <label for="date" class="_f_label">Date:</label>
@@ -18,6 +18,7 @@
             name="date"
             min="2021-01"
             class="_input input-date"
+            aria-label="choose date"
           />
         </fieldset>
         <fieldset class="_f">
@@ -27,11 +28,12 @@
             id="number"
             name="number"
             class="_input input-number"
+            aria-label="type invoice number"
           />
         </fieldset>
       </form>
       <div class="_button-area">
-        <button class="button button--fill">Create Invoice</button>
+        <button class="button button--fill" aria-label="create invoice">Create Invoice</button>
       </div>
     </section>
     <section class="_table-area">
