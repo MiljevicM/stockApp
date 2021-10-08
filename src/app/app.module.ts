@@ -11,6 +11,7 @@ import { SalesPageComponent } from './ui/sales-page/sales-page.component';
 import { PackagingPageComponent } from './ui/packaging-page/packaging-page.component';
 import { ModalModule } from 'angular-custom-modal';
 
+
 @NgModule({
   declarations: [
     AppComponent,

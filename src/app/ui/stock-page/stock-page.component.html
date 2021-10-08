@@ -1,7 +1,7 @@
 <section class="container">
   <header class="_search-header">
-    <p class="_tittle tittle--left">Search invoices</p>
-    <p class="_tittle tittle--right">Create a new invoice</p>
+    <p class="_tittle tittle--left">Search Products</p>
+    <p class="_tittle tittle--right">Add New Product</p>
   </header>
   <main>
     <section class="_main-bar">
@@ -12,7 +12,9 @@
         </fieldset>
       </form>
       <div class="_button-area">
-        <button class="button button--fill">Add new</button>
+        <button class="button button--fill" (click)="openModal()">
+          Add new
+        </button>
       </div>
     </section>
     <section class="_table-area">
@@ -56,4 +58,8 @@
       </table>
     </section>
   </main>
+  <!-- Modal -->
+  <div class="_modal" *ngIf="isShown" (click)="clickedOutside($event)">
+    <div class="modal--inquiry"></div>
+  </div>
 </section>

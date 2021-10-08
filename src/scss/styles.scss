@@ -267,3 +267,30 @@
 .table-area--packaging {
   margin-top: 0;
 }
+
+/*----MODAL----*/
+
+/* background */
+._modal {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+
+  /* content */
+  .modal--inquiry {
+    margin: 0 auto;
+    width: 345px;
+    height: 515px;
+    border: 1px solid $color-primary;
+    border-radius: 10px;
+    background: white;
+  }
+}
