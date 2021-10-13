@@ -1,6 +1,6 @@
 @import "_mixins.scss";
 
-._table_th--mi {
+._table__th--mi {
   .material-icons {
     cursor: pointer;
     margin-right: 15px;
@@ -21,6 +21,16 @@
 
     &:hover {
       transform: scale(1.2);
+    }
+  }
+}
+
+._f--login {
+  .material-icons {
+    &.eye {
+      margin-left: -50px;
+      color: $color-hoverPrimary;
+      cursor: pointer;
     }
   }
 }

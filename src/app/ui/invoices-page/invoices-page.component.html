@@ -1,73 +1,73 @@
-<section class="container">
+<section class="_layout">
   <header class="_search-header">
-    <p class="_tittle tittle--left">Search Invoices</p>
-    <p class="_tittle tittle--right">Create New Invoice</p>
-  </header>
-  <main>
     <section class="_main-bar">
-      <form action="" class="_search-section">
-        <fieldset class="_f">
-          <label for="name" class="_f_label">Company Name:</label>
+      <p class="_main-bar__tittle">Search Invoices</p>
+      <form action="" class="_main-bar__search-section">
+        <fieldset class="_f _f--l">
+          <label for="name" class="_f__label">Company Name:</label>
           <input
             type="text"
             name="name"
             id="name"
-            class="_input input-main"
+            class="_f__input"
             aria-label="type company name"
           />
         </fieldset>
-        <fieldset class="_f">
-          <label for="date" class="_f_label">Date:</label>
+        <fieldset class="_f _f--m">
+          <label for="date" class="_f__label">Date:</label>
           <input
             type="month"
             id="date"
             name="date"
             min="2021-01"
-            class="_input input-date"
+            class="_f__input"
             aria-label="choose date"
           />
         </fieldset>
-        <fieldset class="_f">
-          <label for="number" class="_f_label">Invoice No.:</label>
+        <fieldset class="_f _f--s">
+          <label for="number" class="_f__label">Invoice No.:</label>
           <input
             type="number"
             id="number"
             name="number"
-            class="_input input-number"
+            class="_f__input"
             aria-label="type invoice number"
           />
         </fieldset>
       </form>
-      <div class="_button-area">
-        <button class="button button--fill" aria-label="create invoice">
-          Create Invoice
-        </button>
-      </div>
     </section>
+    <section class="_option">
+      <p class="_option__tittle">Create New Invoice</p>
+      <button class="_btn _btn--fill" aria-label="create invoice">
+        Create Invoice
+      </button>
+    </section>
+  </header>
+  <main>
     <section class="_table-area">
       <table class="_table">
-        <thead class="_table_thead">
+        <thead class="_table__thead">
           <tr>
-            <th class="_table_th table_th--name">Company Name</th>
-            <th class="_table_th table_th--date">Date</th>
-            <th class="_table_th table_th--no">Invoice No.</th>
+            <th class="_table_th _table__th--l">Company Name</th>
+            <th class="_table_th _table__th--m">Date</th>
+            <th class="_table_th _table__th--s">Invoice No.</th>
           </tr>
         </thead>
-        <tbody class="_table_tbody">
-          <tr class="_table_tr table_tr--grey">
-            <th class="_table_th">Example company</th>
-            <th class="_table_th">10.08.2021.</th>
-            <th class="_table_th">354</th>
+        <tbody class="_table__tbody">
+          <tr class="_table__tr _table__tr--grey">
+            <th class="_table__th">Example company</th>
+            <th class="_table__th">10.08.2021.</th>
+            <th class="_table__th">354</th>
           </tr>
-          <tr class="_table_tr">
-            <th class="_table_th">#</th>
-            <th class="_table_th">#</th>
-            <th class="_table_th">#</th>
+          <tr class="_table__tr">
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
           </tr>
-          <tr class="_table_tr table_tr--grey">
-            <th class="_table_th">#</th>
-            <th class="_table_th">#</th>
-            <th class="_table_th">#</th>
+          <tr class="_table__tr _table__tr--grey">
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
           </tr>
         </tbody>
       </table>

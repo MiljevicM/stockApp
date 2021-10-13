@@ -7,33 +7,18 @@
 // Mixins
 @import "_mixins.scss";
 
-/*----REUSABLE----*/
+/*----////// REUSABLE //////----*/
 
-.container {
-  width: 1200px;
+/*----LAYOUT-----*/
+
+._layout {
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-._f {
-  margin-right: 40px;
-  font-family: $font-primary;
-  color: $color-text;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-._input {
-  padding: 0 15px;
-  border: 1px solid $color-primary;
-  border-radius: 20px;
-  font-family: $font-primary;
-  text-align: left;
-  font-size: 14px;
 }
 
 /*----BUTTON----*/
 
-.button {
+._btn {
   padding: 5px 12px;
   border: 1px solid $color-primary;
   border-radius: 20px;
@@ -45,7 +30,7 @@
   text-transform: uppercase;
 }
 
-.button--fill {
+._btn--fill {
   background-color: $color-primary;
   color: white;
 
@@ -53,6 +38,45 @@
     background-color: $color-hoverPrimary;
     color: white;
     cursor: pointer;
+  }
+}
+
+/*----FIELDSET----*/
+._f {
+  margin-right: 40px;
+  font-family: $font-primary;
+  color: $color-text;
+  font-weight: bold;
+  font-size: 14px;
+
+  &__label {
+    margin-right: 10px;
+  }
+
+  &__input {
+    padding: 0 15px;
+    height: 30px;
+    border: 1px solid $color-primary;
+    border-radius: 20px;
+    text-align: left;
+  }
+
+  &--l & {
+    &__input {
+      width: 180px;
+    }
+  }
+
+  &--m & {
+    &__input {
+      width: 170px;
+    }
+  }
+
+  &--s & {
+    &__input {
+      width: 80px;
+    }
   }
 }
 
@@ -65,17 +89,17 @@
   color: $color-text;
   font-size: 14px;
 
-  ._table_thead {
+  ._table__thead {
     height: 54px;
     border-bottom: 2px solid $color-primary;
 
-    ._table_th {
+    ._table__th {
       padding-left: 15px;
     }
   }
 
-  ._table_tbody {
-    ._table_tr {
+  ._table__tbody {
+    ._table__tr {
       height: 44px;
 
       &:hover {
@@ -83,11 +107,11 @@
       }
     }
 
-    .table_tr--grey {
+    ._table__tr--grey {
       background-color: $color-rowTable;
     }
 
-    ._table_th {
+    ._table__th {
       padding-left: 15px;
       font-weight: normal;
       color: black;
@@ -95,32 +119,12 @@
   }
 }
 
-/*----TABLE SECTION----*/
-
-._table-area {
-  display: flex;
-  margin-top: 70px;
-}
-
-.table_th--name {
-  width: 800px;
-}
-
-.table_th--date {
-  width: 350px;
-  padding-left: 15px;
-}
-
-.table_th--no {
-  width: 150px;
-  padding-left: 15px;
-}
+/*-------/////////////---------------*/
 
 /*----TITTLE----*/
 
 ._search-header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin-bottom: 30px;
   font-family: $font-primary;
@@ -142,90 +146,94 @@
   }
 }
 
-/*----FIRST SECTION----*/
+/*------MAIN BAR------*/
 
 ._main-bar {
+  width: 75%;
+}
+
+._main-bar--full-width {
+  width: 100%;
+}
+
+._main-bar__tittle {
+  border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+._main-bar__search-section {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+}
 
-  ._search-section {
-    display: flex;
-    flex-direction: row;
+._option {
+  width: 22%;
+}
 
-    ._f_label {
-      margin-right: 10px;
-    }
+._option__tittle {
+  border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
 
-    .input-main {
-      width: 180px;
-      height: 30px;
-    }
+/*----TABLE SECTION----*/
 
-    .input-date {
-      width: 170px;
-      height: 30px;
-    }
+._table-area {
+  display: flex;
+  margin-top: 70px;
+}
 
-    .input-number {
-      width: 80px;
-      height: 30px;
-    }
-  }
+._table__th--l {
+  width: 800px;
+}
 
-  ._button-area {
-    width: 22%;
-  }
+._table__th--m {
+  width: 350px;
+  padding-left: 15px;
+}
+
+._table__th--s {
+  width: 150px;
+  padding-left: 15px;
 }
 
 /*----LOGIN PAGE----*/
 
-.f--login {
+._f--login {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+}
 
-  ._f_label--login {
-    margin-bottom: 5px;
-  }
-
-  .input--login {
-    width: 300px;
-    height: 35px;
-  }
-
-  .input-password {
-    display: flex;
-    align-items: center;
-
-    .material-icons {
-      margin-left: -50px;
-      color: $color-hoverPrimary;
-      cursor: pointer;
-    }
+._btnContainer--login {
+  ._btn--fill {
+    margin-right: 10px;
   }
 }
 
-.button--fill--login {
-  margin-right: 10px;
-  background-color: $color-primary;
-  color: white;
-
-  &:hover {
-    background-color: $color-hoverPrimary;
-    color: white;
-    cursor: pointer;
-  }
-}
-
-.button--register:hover {
+._btn--register:hover {
   background-color: $color-hoverSecondary;
   cursor: pointer;
 }
 
+._f {
+  &--login & {
+    &__label {
+      margin-bottom: 5px;
+    }
+  }
+
+  &--login & {
+    &__input {
+      width: 300px;
+      height: 35px;
+    }
+  }
+}
+
 /*----PACKAGING PAGE----*/
 
-._tabs-area {
+._tabs-bar {
   display: flex;
   align-items: center;
   height: 54px;
@@ -241,7 +249,7 @@
     flex-direction: row;
     list-style-type: none;
 
-    ._tabs_li {
+    ._tabs__li {
       .active {
         padding: 26px 5px;
         background-color: white;
@@ -249,7 +257,7 @@
         cursor: pointer;
       }
 
-      ._tabs_a {
+      ._tabs__a {
         padding: 26px 5px;
         margin-right: 25px;
 
@@ -264,11 +272,11 @@
   }
 }
 
-.table-area--packaging {
+._table-area--packaging {
   margin-top: 0;
 }
 
-/*----MODAL----*/
+/*----MODAL srediti modal----*/
 
 /* background */
 ._modal {
