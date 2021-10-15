@@ -34,3 +34,13 @@
     }
   }
 }
+
+._f--modal--checkbox{
+  .material-icons {
+    &.checkbox {
+      margin-right: 10px;
+      color: $color-hoverPrimary;
+      cursor: pointer;
+    }
+  }
+}

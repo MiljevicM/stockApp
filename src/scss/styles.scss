@@ -25,7 +25,7 @@
   color: $color-primary;
   font-family: $font-primary;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1rem;
   background-color: white;
   text-transform: uppercase;
 }
@@ -47,7 +47,7 @@
   font-family: $font-primary;
   color: $color-text;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1rem;
 
   &__label {
     margin-right: 10px;
@@ -87,7 +87,7 @@
   text-align: left;
   font-family: $font-primary;
   color: $color-text;
-  font-size: 14px;
+  font-size: 1rem;
 
   ._table__thead {
     height: 54px;
@@ -121,7 +121,7 @@
 
 /*-------/////////////---------------*/
 
-/*----TITTLE----*/
+/*----HEADER----*/
 
 ._search-header {
   display: flex;
@@ -130,20 +130,7 @@
   font-family: $font-primary;
   color: black;
   font-weight: normal;
-  font-size: 14px;
-
-  ._tittle {
-    width: 100%;
-    border-bottom: 1px solid rgba(112, 112, 112, 0.2);
-    padding-bottom: 10px;
-
-    &.tittle--left {
-      width: 75%;
-    }
-    &.tittle--right {
-      width: 22%;
-    }
-  }
+  font-size: 1rem;
 }
 
 /*------MAIN BAR------*/
@@ -185,6 +172,7 @@
 
 ._table__th--l {
   width: 800px;
+  padding-left: 15px;
 }
 
 ._table__th--m {
@@ -239,7 +227,7 @@
   height: 54px;
   margin-top: 70px;
   font-family: $font-primary;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
   background: $color-primary;
   color: white;
@@ -276,7 +264,7 @@
   margin-top: 0;
 }
 
-/*----MODAL srediti modal----*/
+/*----MODAL----*/
 
 /* background */
 ._modal {
@@ -293,12 +281,122 @@
   background-color: rgba(0, 0, 0, 0.4);
 
   /* content */
-  .modal--inquiry {
+  ._modal__inquiry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
-    width: 345px;
-    height: 515px;
+    //width: 450px;
+    //height: 515px;
+    padding: 50px;
     border: 1px solid $color-primary;
     border-radius: 10px;
     background: white;
   }
+
+  ._modal__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  ._f--modal {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+  }
 }
+
+._f--modal--checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 0px;
+  margin-bottom: 20px;
+}
+
+._f {
+  &--modal & {
+    &__input {
+      width: 275px;
+      height: 39px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &--modal & {
+    &__label {
+      margin-bottom: 10px;
+    }
+  }
+
+  &--modal--checkbox & {
+    &__label {
+      margin-right: 0px;
+    }
+  }
+}
+._btnContainer--modal {
+  ._btn--fill {
+    margin-right: 10px;
+  }
+}
+
+._modal__inquiry--packaging {
+  padding: 40px;
+}
+
+/*------CUSTOM CHECKBOX-----------*/
+
+.boxes {
+  margin: auto;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/*Checkboxes styles*/
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font-family: $font-primary;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $color-text;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $color-primary;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+

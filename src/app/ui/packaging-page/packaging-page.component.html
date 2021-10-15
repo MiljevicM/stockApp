@@ -11,7 +11,7 @@
     </section>
     <section class="_option">
       <p class="_option__tittle">Add New {{ selectedList }}</p>
-      <button class="_btn _btn--fill">Add new</button>
+      <button class="_btn _btn--fill" (click)="openModal()">Add new</button>
     </section>
   </header>
   <main>
@@ -71,4 +71,21 @@
       </table>
     </section>
   </main>
+   <!-- Modal -->
+   <section class="_modal" *ngIf="isShown" (click)="clickedOutside($event)">
+    <div class="_modal__inquiry _modal__inquiry--packaging">
+      <div class="_modal__form">
+        <form action="" >
+          <fieldset class="_f _f--modal">
+            <label for="product" class="_f__label">Product Name:</label>
+            <input type="text" name="product" id="product" class="_f__input" />
+          </fieldset>
+        </form>
+        <div class="_btnContainer _btnContainer--modal">
+          <button class="_btn _btn--fill">Save</button>
+          <button class="_btn _btn--register" (click)="cancelModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>

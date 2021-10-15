@@ -9,6 +9,9 @@ export class PackagingPageComponent implements OnInit {
   menuLists = ['Packaging', 'Covers', 'Labels', 'Boxes', 'Other'];
   selectedList: any;
 
+  isShown: boolean = false;
+  hide = true;
+
   constructor() {}
 
   ngOnInit(): void {
@@ -17,5 +20,19 @@ export class PackagingPageComponent implements OnInit {
 
   openMenuList(menuList: any) {
     this.selectedList = menuList;
+  }
+
+  openModal() {
+    this.isShown = true;
+  }
+
+  cancelModal() {
+    this.isShown = false;
+  }
+
+  clickedOutside(event: any) {
+    if (event.target.className === '_modal') {
+      this.isShown = false;
+    }
   }
 }

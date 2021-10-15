@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class StockPageComponent implements OnInit {
 
   isShown: boolean = false;
+  hide = true;
+
+  isChecked = false;
+  
   
   constructor() {}
 
@@ -19,10 +23,20 @@ export class StockPageComponent implements OnInit {
     this.isShown = true;
   }
 
+  cancelModal() {
+    this.isShown = false;
+  }
+
   clickedOutside(event: any) {
     if (event.target.className === '_modal') {
       this.isShown = false;
     }
+  }
+
+
+  onChanged($event: any) {
+    this.isChecked = $event && $event.target && $event.target.checked;
+    this.onChanged(this.isChecked);
   }
 
 }

@@ -10,6 +10,10 @@ import { StockPageComponent } from './ui/stock-page/stock-page.component';
 import { SalesPageComponent } from './ui/sales-page/sales-page.component';
 import { PackagingPageComponent } from './ui/packaging-page/packaging-page.component';
 import { ModalModule } from 'angular-custom-modal';
+import { DpDatePickerModule } from 'ng2-date-picker';
+import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
+
 
 
 @NgModule({
@@ -21,11 +25,15 @@ import { ModalModule } from 'angular-custom-modal';
     StockPageComponent,
     SalesPageComponent,
     PackagingPageComponent
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ModalModule
+    ModalModule,
+    DpDatePickerModule,
+    FormsModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
