@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StockPageComponent implements OnInit {
 
   isShown: boolean = false;
-  hide = true;
+ 
 
   isChecked = false;
   

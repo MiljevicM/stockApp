@@ -7,6 +7,9 @@
 // Mixins
 @import "_mixins.scss";
 
+// ng-select
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 /*----////// REUSABLE //////----*/
 
 /*----LAYOUT-----*/
@@ -21,7 +24,8 @@
 ._btn {
   padding: 5px 12px;
   border: 1px solid $color-primary;
-  border-radius: 20px;
+  //border-radius: 20px;
+  border-radius: 4px;
   color: $color-primary;
   font-family: $font-primary;
   font-weight: bold;
@@ -43,6 +47,8 @@
 
 /*----FIELDSET----*/
 ._f {
+  display: flex;
+  align-items: center;
   margin-right: 40px;
   font-family: $font-primary;
   color: $color-text;
@@ -54,10 +60,13 @@
   }
 
   &__input {
-    padding: 0 15px;
+    //padding: 0 15px;
+    padding: 0 5px;
     height: 30px;
-    border: 1px solid $color-primary;
-    border-radius: 20px;
+    border: 1px solid #ccc;
+    //border: 1px solid $color-primary;
+    //border-radius: 20px;
+    border-radius: 4px;
     text-align: left;
   }
 
@@ -188,9 +197,15 @@
 /*----LOGIN PAGE----*/
 
 ._f--login {
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
+  display: grid;
   margin-bottom: 20px;
+}
+
+.input-password {
+  display: flex;
+  align-items: center;
 }
 
 ._btnContainer--login {
@@ -215,6 +230,7 @@
     &__input {
       width: 300px;
       height: 35px;
+      border: 1px solid $color-primary;
     }
   }
 }
@@ -224,8 +240,9 @@
 ._tabs-bar {
   display: flex;
   align-items: center;
-  height: 54px;
+  height: 40px;
   margin-top: 70px;
+  margin-bottom: 20px;
   font-family: $font-primary;
   font-size: 1rem;
   font-weight: bold;
@@ -289,7 +306,7 @@
     //width: 450px;
     //height: 515px;
     padding: 50px;
-    border: 1px solid $color-primary;
+    //border: 1px solid $color-primary;
     border-radius: 10px;
     background: white;
   }
@@ -304,6 +321,7 @@
   ._f--modal {
     display: flex;
     flex-direction: column;
+    align-items: start;
     margin-right: 0px;
   }
 }
@@ -347,6 +365,118 @@
   padding: 40px;
 }
 
+/*----Modal2 proba----///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+._modal--bg-white {
+  align-items: baseline;
+  background-color: white;
+
+  ._layout {
+    margin-top: 100px;
+  }
+
+  .all {
+    display: flex;
+    flex-direction: row;
+    font-family: $font-primary;
+    color: $color-text;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 2rem;
+
+    border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+    .text-box {
+      margin-right: 100px;
+    }
+  }
+
+  .text-date {
+    display: flex;
+    flex-direction: row;
+    font-family: $font-primary;
+    color: $color-text;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 2rem;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+    & p {
+      margin-right: 50px;
+      text-align: center;
+    }
+  }
+
+  ._table-area {
+    margin-top: 0;
+    ._table {
+      text-align: center;
+
+      ._table__th--l {
+        width: 800px;
+        padding-left: 0;
+      }
+
+      ._table__th--m {
+        width: 350px;
+        padding-left: 0;
+      }
+
+      ._table__th--s {
+        width: 150px;
+        padding-left: 0;
+      }
+
+      ._table__tbody {
+        ._table__th {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.option--done {
+  justify-content: end;
+}
+
+.total {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  font-family: $font-primary;
+  color: $color-text;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 2rem;
+  align-items: center;
+
+  border-top: 1px solid rgba(112, 112, 112, 0.2);
+  padding-top: 10px;
+  margin-top: 20px;
+
+  & p {
+    margin-left: 50px;
+    text-align: center;
+  }
+
+}
+
+/*-----------------------------///////////////////////////////////////////////////////////////////////////////////-*
+
 /*------CUSTOM CHECKBOX-----------*/
 
 .boxes {
@@ -358,7 +488,9 @@
 }
 
 /*Checkboxes styles*/
-input[type="checkbox"] { display: none; }
+input[type="checkbox"] {
+  display: none;
+}
 
 input[type="checkbox"] + label {
   display: block;
@@ -372,10 +504,12 @@ input[type="checkbox"] + label {
   cursor: pointer;
 }
 
-input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
 
 input[type="checkbox"] + label:before {
-  content: '';
+  content: "";
   display: block;
   width: 20px;
   height: 20px;
@@ -384,8 +518,8 @@ input[type="checkbox"] + label:before {
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-transition: all .12s, border-color .08s;
-  transition: all .12s, border-color .08s;
+  -webkit-transition: all 0.12s, border-color 0.08s;
+  transition: all 0.12s, border-color 0.08s;
 }
 
 input[type="checkbox"]:checked + label:before {
@@ -400,3 +534,19 @@ input[type="checkbox"]:checked + label:before {
   transform: rotate(45deg);
 }
 
+/*-----Ng Select ----- */
+
+._f--l {
+  .ng-select {
+    font-weight: normal;
+
+    .ng-select-container {
+      min-height: 30px;
+      height: 30px;
+      width: 180px;
+      //border: 1px solid $color-primary;
+      //border-radius: 20px;
+      text-align: left;
+    }
+  }
+}

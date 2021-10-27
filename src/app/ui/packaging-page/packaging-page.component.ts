@@ -10,7 +10,7 @@ export class PackagingPageComponent implements OnInit {
   selectedList: any;
 
   isShown: boolean = false;
-  hide = true;
+ 
 
   constructor() {}
 
