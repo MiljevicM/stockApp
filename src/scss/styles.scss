@@ -263,11 +263,12 @@
       }
 
       ._tabs__a {
-        padding: 26px 5px;
-        margin-right: 25px;
+        padding: 5px 10px 10px;
+        border-radius: 5px 5px 0px 0px;
+        //margin-right: 25px;
 
         &:hover {
-          padding: 26px 5px;
+          padding: 5px 10px 10px;
           color: $color-primary;
           background-color: white;
           cursor: pointer;
@@ -453,7 +454,6 @@
 }
 
 .total {
-
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -472,7 +472,6 @@
     margin-left: 50px;
     text-align: center;
   }
-
 }
 
 /*-----------------------------///////////////////////////////////////////////////////////////////////////////////-*
