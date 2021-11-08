@@ -11,8 +11,10 @@ import { SalesPageComponent } from './ui/sales-page/sales-page.component';
 import { PackagingPageComponent } from './ui/packaging-page/packaging-page.component';
 import { ModalModule } from 'angular-custom-modal';
 import { DpDatePickerModule } from 'ng2-date-picker';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { CompaniesPageComponent } from './ui/companies-page/companies-page.component';
 
 
 
@@ -24,7 +26,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     InvoicesPageComponent,
     StockPageComponent,
     SalesPageComponent,
-    PackagingPageComponent
+    PackagingPageComponent,
+    CompaniesPageComponent
   
   ],
   imports: [
@@ -33,7 +36,10 @@ import { NgSelectModule } from '@ng-select/ng-select';
     ModalModule,
     DpDatePickerModule,
     FormsModule,
-    NgSelectModule
+    NgSelectModule,
+    OwlDateTimeModule, 
+    OwlNativeDateTimeModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

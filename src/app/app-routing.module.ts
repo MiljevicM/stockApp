@@ -1,3 +1,4 @@
+import { CompaniesPageComponent } from './ui/companies-page/companies-page.component';
 import { PackagingPageComponent } from './ui/packaging-page/packaging-page.component';
 import { SalesPageComponent } from './ui/sales-page/sales-page.component';
 import { StockPageComponent } from './ui/stock-page/stock-page.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'invoices', component: InvoicesPageComponent },
   { path: 'stock', component: StockPageComponent },
   { path: 'packaging', component: PackagingPageComponent },
-  { path: 'sales', component: SalesPageComponent }
+  { path: 'sales', component: SalesPageComponent },
+  { path: 'companies', component: CompaniesPageComponent }
 ];
 
 @NgModule({

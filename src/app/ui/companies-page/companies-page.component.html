@@ -1,0 +1,133 @@
+<section class="_layout">
+  <header class="_search-header">
+    <section class="_main-bar">
+      <p class="_main-bar__tittle">Search Companies</p>
+      <form action="" class="_main-bar__search-section">
+        <fieldset class="_f _f--l">
+          <label for="name" class="_f__label">Company Name:</label>
+          <input type="text" name="name" id="name" class="_f__input" />
+        </fieldset>
+      </form>
+    </section>
+    <section class="_option">
+      <p class="_option__tittle">Add New Company</p>
+      <button class="_btn _btn--fill" (click)="openModal()">Add new</button>
+    </section>
+  </header>
+  <main>
+    <section class="_table-area">
+      <table class="_table">
+        <thead class="_table__thead">
+          <tr>
+            <th class="_table_th _table__th--l">Company Name</th>
+            <th class="_table_th _table__th--l">Address</th>
+            <th class="_table_th _table__th--l">City and Post Code</th>
+            <th class="_table_th _table__th--m">PIB</th>
+            <th class="_table_th _table__th--m">Company Number</th>
+            <th class="_table_th _table__th--m">Bank Number</th>
+            <th class="_table_th _table__th--s">Discount (%)</th>
+            <th class="_table_th _table__th--m"></th>
+          </tr>
+        </thead>
+        <tbody class="_table__tbody">
+          <tr class="_table__tr _table__tr--grey">
+            <th class="_table__th">Example company</th>
+            <th class="_table__th">Example street 34</th>
+            <th class="_table__th">Example city 11300</th>
+            <th class="_table__th">123456789</th>
+            <th class="_table__th">123456789</th>
+            <th class="_table__th">123456789</th>
+            <th class="_table__th">30</th>
+            <th class="_table__th _table__th--mi">
+              <span class="material-icons blue">edit_note</span>
+              <span class="material-icons red">highlight_off</span>
+            </th>
+          </tr>
+          <tr class="_table__tr">
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th _table__th--mi">
+              <span class="material-icons blue">edit_note</span>
+              <span class="material-icons red">highlight_off</span>
+            </th>
+          </tr>
+          <tr class="_table__tr _table__tr--grey">
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th _table__th--mi">
+              <span class="material-icons blue">edit_note</span>
+              <span class="material-icons red">highlight_off</span>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <!-- Modal -->
+  <section class="_modal _modal--columns" *ngIf="isShown" (click)="clickedOutside($event)">
+    <div class="_modal__inquiry">
+      <div class="_modal__form">
+        <form action="" class="_form">
+          <section class="_modal__column">
+          <fieldset class="_f _f--modal">
+            <label for="company" class="_f__label">Company Name:</label>
+            <input type="text" name="company" id="company" class="_f__input" />
+          </fieldset>
+          <fieldset class="_f _f--modal">
+            <label for="address" class="_f__label">Address:</label>
+            <input type="text" name="address" id="address" class="_f__input" />
+          </fieldset>
+          <fieldset class="_f _f--modal">
+            <label for="city" class="_f__label">City and Post Code:</label>
+            <input type="text" name="city" id="city" class="_f__input" />
+          </fieldset>
+          <fieldset class="_f _f--modal">
+            <label for="pib" class="_f__label">PIB:</label>
+            <input type="text" name="pib" id="pib" class="_f__input" />
+          </fieldset>
+        </section>
+          <section class="_modal__column">
+            <fieldset class="_f _f--modal">
+              <label for="companyNo" class="_f__label">Company Number:</label>
+              <input
+                type="text"
+                name="companyNo"
+                id="companyNo"
+                class="_f__input"
+              />
+            </fieldset>
+            <fieldset class="_f _f--modal">
+              <label for="bankNo" class="_f__label">Bank Number:</label>
+              <input type="text" name="bankNo" id="bankNo" class="_f__input" />
+            </fieldset>
+            <fieldset class="_f _f--modal">
+              <label for="discount" class="_f__label">Discount:</label>
+              <input
+                type="text"
+                name="discount"
+                id="discount"
+                class="_f__input"
+              />
+            </fieldset>
+          </section>
+        </form>
+        <div class="_btnContainer _btnContainer--modal">
+          <button class="_btn _btn--fill">Save</button>
+          <button class="_btn _btn--register" (click)="cancelModal()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

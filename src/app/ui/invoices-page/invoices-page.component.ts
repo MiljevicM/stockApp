@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DpDatePickerModule } from 'ng2-date-picker';
+
 
 @Component({
   selector: 'app-invoices-page',
@@ -7,7 +7,6 @@ import { DpDatePickerModule } from 'ng2-date-picker';
   styleUrls: ['./invoices-page.component.scss'],
 })
 export class InvoicesPageComponent implements OnInit {
-
   isShown: boolean = false;
 
   isShown1: boolean = true;
@@ -19,10 +18,6 @@ export class InvoicesPageComponent implements OnInit {
     { value: 2, label: 'Kaunas' },
     { value: 3, label: 'Pavilnys' },
   ];
-
-  datePickerConfig: DpDatePickerModule = {
-    format: 'MMM, YYYY',
-  };
 
   constructor() {}
 

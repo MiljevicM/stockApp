@@ -10,6 +10,9 @@
 // ng-select
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
+// ng-pick-datetime
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+
 /*----////// REUSABLE //////----*/
 
 /*----LAYOUT-----*/
@@ -319,20 +322,19 @@
     margin: 0 auto;
   }
 
+  ._modal__column {
+    display: flex;
+    ._f__input {
+      margin-right: 10px;
+    }
+  }
+
   ._f--modal {
     display: flex;
     flex-direction: column;
     align-items: start;
     margin-right: 0px;
   }
-}
-
-._f--modal--checkbox {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 0px;
-  margin-bottom: 20px;
 }
 
 ._f {
@@ -364,6 +366,16 @@
 
 ._modal__inquiry--packaging {
   padding: 40px;
+}
+
+._modal--columns {
+  ._form {
+    display: flex;
+  }
+
+  ._modal__column {
+    display: block;
+  }
 }
 
 /*----Modal2 proba----///////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -475,63 +487,6 @@
 }
 
 /*-----------------------------///////////////////////////////////////////////////////////////////////////////////-*
-
-/*------CUSTOM CHECKBOX-----------*/
-
-.boxes {
-  margin: auto;
-  margin-bottom: 20px;
-
-  display: flex;
-  flex-direction: column;
-}
-
-/*Checkboxes styles*/
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"] + label {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 20px;
-  font-family: $font-primary;
-  font-size: 1rem;
-  font-weight: bold;
-  color: $color-text;
-  cursor: pointer;
-}
-
-input[type="checkbox"] + label:last-child {
-  margin-bottom: 0;
-}
-
-input[type="checkbox"] + label:before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid $color-primary;
-  border-radius: 5px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-transition: all 0.12s, border-color 0.08s;
-  transition: all 0.12s, border-color 0.08s;
-}
-
-input[type="checkbox"]:checked + label:before {
-  width: 10px;
-  top: -5px;
-  left: 5px;
-  border-radius: 0;
-  opacity: 1;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
 
 /*-----Ng Select ----- */
 
