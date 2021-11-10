@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { OwlDateTimeIntl } from 'ng-pick-datetime';
+
+
 
 @Component({
   selector: 'app-invoices-page',
@@ -19,7 +22,22 @@ export class InvoicesPageComponent implements OnInit {
     { value: 3, label: 'Pavilnys' },
   ];
 
-  constructor() {}
+  public dateFrom = '21/06/2019 22:22:45';
+
+  constructor(
+    private owlDateTimeIntl: OwlDateTimeIntl
+  ) {
+    this.loadBtnI18n();
+  }
+
+  public changeDate(e: any) {
+    console.log(e.input.value);
+  }
+
+  public loadBtnI18n(): void {
+    this.owlDateTimeIntl.setBtnLabel = 'Set';
+    this.owlDateTimeIntl.cancelBtnLabel = 'Cancel';
+  }
 
   ngOnInit(): void {}
 

@@ -23,6 +23,7 @@
     "@ng-select/ng-select": "^7.0.1",
     "angular-custom-modal": "^1.2.0",
     "json-server": "^0.17.0",
+    "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
     "ng-click-outside": "^9.0.0",
     "ng-pick-datetime": "^7.0.0",

@@ -9,9 +9,15 @@
         </fieldset>
         <fieldset class="_f _f--m">
           <label for="date" class="_f__label">Date:</label>
-          <input [owlDateTime]="dt2" placeholder="Date Time" />
-          <span [owlDateTimeTrigger]="dt2"><i class="fa fa-calendar"></i></span>
-          <owl-date-time #dt2></owl-date-time>
+          <input  class="_f__input" type="text"
+          [(ngModel)]="dateFrom"
+          (dateTimeChange)="changeDate($event)"
+          [owlDateTimeTrigger]="dt"
+          [owlDateTime]="dt"
+          name="dateFrom"
+          placeholder="DD/MM/YYYY"
+          maxlength="10">
+        <owl-date-time [pickerType]="'both'" #dt></owl-date-time>
         </fieldset>
         <fieldset class="_f _f--s">
           <label for="number" class="_f__label">Invoice No.:</label>
