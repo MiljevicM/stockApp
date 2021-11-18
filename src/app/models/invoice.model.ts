@@ -4,8 +4,8 @@ import { ProductInvoiceModel } from "./product-invoice.model";
 
 export interface InvoiceModel {
     id: number;
-    companyModel: CompanyModel;
+    company: CompanyModel;
     date: number;
-    productInvModel: ProductInvoiceModel[];
-    myCompanyModel: MyCompanyModel;
+    productInvoice: ProductInvoiceModel[];
+    myCompany: MyCompanyModel;
 }

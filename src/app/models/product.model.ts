@@ -7,11 +7,11 @@ import { PackagingModel } from "./packaging.model";
 export interface ProductModel {
     id: number;
     name: number;
-    packagingModel: PackagingModel;
-    coverModel: CoverModel;
-    labelModel: LabelModel;
-    boxModel: BoxModel;
-    otherModel: OtherModel;
+    packaging: PackagingModel;
+    cover: CoverModel;
+    label: LabelModel;
+    box: BoxModel;
+    other: OtherModel;
     unitOfMeasure: number;
     pricePerUnitOfMeasure: number;
     counter: number;

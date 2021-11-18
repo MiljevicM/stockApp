@@ -1,3 +1,4 @@
+import { InvoicePageComponent } from './ui/invoice-page/invoice-page.component';
 import { CompaniesPageComponent } from './ui/companies-page/companies-page.component';
 import { PackagingPageComponent } from './ui/packaging-page/packaging-page.component';
 import { SalesPageComponent } from './ui/sales-page/sales-page.component';
@@ -10,6 +11,7 @@ import { LoginPageComponent } from './ui/login-page/login-page.component';
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'invoices', component: InvoicesPageComponent },
+  { path: 'invoice', component: InvoicePageComponent},
   { path: 'stock', component: StockPageComponent },
   { path: 'packaging', component: PackagingPageComponent },
   { path: 'sales', component: SalesPageComponent },

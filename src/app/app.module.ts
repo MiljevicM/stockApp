@@ -20,11 +20,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   OwlDateTimeModule,
   OwlNativeDateTimeModule,
-  DateTimeAdapter,
-  OWL_DATE_TIME_LOCALE,
   OWL_DATE_TIME_FORMATS,
 } from 'ng-pick-datetime';
-//import { MomentDateTimeAdapter } from 'ng-pick-datetime-moment';
+import { InvoicePageComponent } from './ui/invoice-page/invoice-page.component';
+
 
 // Format custom
 export const MY_CUSTOM_FORMATS = {
@@ -47,6 +46,7 @@ export const MY_CUSTOM_FORMATS = {
     SalesPageComponent,
     PackagingPageComponent,
     CompaniesPageComponent,
+    InvoicePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,8 +60,6 @@ export const MY_CUSTOM_FORMATS = {
     BrowserAnimationsModule,
   ],
   providers: [
-    { provide: OWL_DATE_TIME_LOCALE, useValue: 'vi' },
-   // { provide: DateTimeAdapter, useClass: MomentDateTimeAdapter },
     { provide: OWL_DATE_TIME_FORMATS, useValue: MY_CUSTOM_FORMATS },
   ],
   bootstrap: [AppComponent],
