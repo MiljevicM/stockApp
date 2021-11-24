@@ -1,0 +1,92 @@
+<section class="_layout">
+    <header class="_search-header">
+      <section class="_main-bar">
+        <p class="_main-bar__tittle">Search {{ selectedList }}</p>
+        <form action="" class="_main-bar__search-section">
+          <fieldset class="_f _f--l">
+            <label for="name" class="_f__label">{{ selectedList }} Name:</label>
+            <input type="text" name="name" id="name" class="_f__input" />
+          </fieldset>
+        </form>
+      </section>
+      <section class="_option">
+        <p class="_option__tittle">Add New {{ selectedList }}</p>
+        <button class="_btn _btn--fill" (click)="openModal()">Add new</button>
+      </section>
+    </header>
+    <main>
+      <section class="_tabs-bar">
+        <ul class="_tabs">
+          <li class="_tabs__li" *ngFor="let menuList of menuLists">
+            <a
+              class="_tabs__a"
+              (click)="openMenuList(menuList)"
+              [ngClass]="{ active: selectedList === menuList }"
+              >{{ menuList }}</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section
+        class="_table-area _table-area--packaging"
+        *ngIf="selectedList === 'Packaging'"
+      >
+        <table class="_table">
+          <thead class="_table__thead">
+            <tr>
+              <th class="_table__th _table__th--l">Product Name</th>
+              <th class="_table__th _table__th--m">In Stock</th>
+              <th class="_table__th _table__th--s"></th>
+            </tr>
+          </thead>
+          <tbody class="_table__tbody">
+            <tr class="_table__tr _table__tr--grey">
+              <th class="_table__th">Example product</th>
+              <th class="_table__th">3456</th>
+              <th class="_table__th _table__th--mi">
+                <span class="material-icons green">add_circle_outline</span>
+                <span class="material-icons blue">edit_note</span>
+                <span class="material-icons red">highlight_off</span>
+              </th>
+            </tr>
+            <tr class="_table__tr">
+              <th class="_table__th">#</th>
+              <th class="_table__th">#</th>
+              <th class="_table__th _table__th--mi">
+                <span class="material-icons green">add_circle_outline</span>
+                <span class="material-icons blue">edit_note</span>
+                <span class="material-icons red">highlight_off</span>
+              </th>
+            </tr>
+            <tr class="_table__tr _table__tr--grey">
+              <th class="_table__th">#</th>
+              <th class="_table__th">#</th>
+              <th class="_table__th _table__th--mi">
+                <span class="material-icons green">add_circle_outline</span>
+                <span class="material-icons blue">edit_note</span>
+                <span class="material-icons red">highlight_off</span>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+     <!-- Modal -->
+     <section class="_modal" *ngIf="isShown" (click)="clickedOutside($event)">
+      <div class="_modal__inquiry _modal__inquiry--packaging">
+        <div class="_modal__form">
+          <form action="" >
+            <fieldset class="_f _f--modal">
+              <label for="product" class="_f__label">Product Name:</label>
+              <input type="text" name="product" id="product" class="_f__input" />
+            </fieldset>
+          </form>
+          <div class="_btnContainer _btnContainer--modal">
+            <button class="_btn _btn--fill">Save</button>
+            <button class="_btn _btn--register" (click)="cancelModal()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  

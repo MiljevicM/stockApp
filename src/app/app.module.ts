@@ -23,6 +23,9 @@ import {
   OWL_DATE_TIME_FORMATS,
 } from 'ng-pick-datetime';
 import { InvoicePageComponent } from './ui/invoice-page/invoice-page.component';
+import { LayoutComponent } from './layout/layout.component';
+import { NavigationComponent } from './layout/navigation/navigation.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 
 // Format custom
@@ -47,6 +50,10 @@ export const MY_CUSTOM_FORMATS = {
     PackagingPageComponent,
     CompaniesPageComponent,
     InvoicePageComponent,
+    LayoutComponent,
+    NavigationComponent,
+    FooterComponent
+   
   ],
   imports: [
     BrowserModule,
