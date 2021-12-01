@@ -26,36 +26,30 @@
 }
 
 ._layout--invoice {
-
   ._table__th {
-
     .material-icons {
       cursor: pointer;
       margin-right: 15px;
       margin-left: 0;
       transition: 0.2s;
-  
+
       &.red {
         color: $color-text-bold;
       }
-  
+
       &:hover {
         color: red;
         transform: scale(1.2);
       }
     }
-  
   }
-
 }
-
-
 
 ._f--login {
   .material-icons {
     &.eye {
       margin-left: -50px;
-      color: $color-hover-primary;
+      color: $color-base;
       cursor: pointer;
     }
   }

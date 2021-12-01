@@ -28,15 +28,9 @@ export class StockPageComponent implements OnInit {
   }
 
   clickedOutside(event: any) {
-    if (event.target.className === '_modal') {
+    if (event.target.className === '_modal _modal--columns') {
       this.isShown = false;
     }
-  }
-
-
-  onChanged($event: any) {
-    this.isChecked = $event && $event.target && $event.target.checked;
-    this.onChanged(this.isChecked);
   }
 
 }

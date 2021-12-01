@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { InvoicesPageComponent } from './ui/invoices-page/invoices-page.component';
 import { LoginPageComponent } from './ui/login-page/login-page.component';
 
+/*
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'invoices', component: InvoicesPageComponent },
@@ -18,8 +19,62 @@ const routes: Routes = [
   { path: 'companies', component: CompaniesPageComponent }
 ];
 
+*/
+
+const routes: Routes = [
+  {
+    path: 'invoices',
+    component: InvoicesPageComponent,
+    data: {
+      header: true,
+    },
+  },
+  {
+    path: 'invoice',
+    component: InvoicePageComponent,
+    data: {
+      header: true,
+    },
+  },
+  {
+    path: 'stock',
+    component: StockPageComponent,
+    data: {
+      header: true,
+    },
+  },
+  {
+    path: 'packaging',
+    component: PackagingPageComponent,
+    data: {
+      header: true,
+    },
+  },
+  {
+    path: 'sales',
+    component: SalesPageComponent,
+    data: {
+      header: true,
+    },
+  },
+  {
+    path: 'companies',
+    component: CompaniesPageComponent,
+    data: {
+      header: true,
+    },
+  },
+  {
+    path: 'login',
+    component: LoginPageComponent,
+    data: {
+      header: false,
+    },
+  },
+];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

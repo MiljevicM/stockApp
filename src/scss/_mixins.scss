@@ -18,3 +18,11 @@ $color-header-lines: #e4e9ed;
 $color-base: white;
 $color-input: #ccc;
 $color-tab-bar: #639CD9;
+
+// Responsive
+
+@mixin respSpecif($dimension) {
+    @media only screen and (max-width: #{$dimension - 1}px) {
+        @content;
+    }
+}

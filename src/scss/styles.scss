@@ -20,6 +20,10 @@
 ._layout {
   max-width: 1200px;
   margin: 0 auto;
+
+  @include respSpecif(1250) {
+    margin: 0 15px;
+  }
 }
 
 /*----BUTTON----*/
@@ -31,7 +35,7 @@
   border-radius: 4px;
   color: $color-primary;
   font-family: $font-primary;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1rem;
   background-color: $color-base;
   text-transform: uppercase;
@@ -45,6 +49,11 @@
     background-color: $color-hover-primary;
     cursor: pointer;
   }
+}
+
+._btn--empty:hover {
+  background-color: $color-hover-secondary;
+  cursor: pointer;
 }
 
 /*----FIELDSET----*/
@@ -218,11 +227,12 @@
 
     ._logo__img {
       width: 90px;
+      margin-left: 10px;
       cursor: pointer;
 
       &:hover {
         transform: translateY(-2px);
-        transition: .4s all;
+        transition: 0.4s all;
       }
     }
   }
@@ -279,11 +289,59 @@
 
 /*----LOGIN PAGE----*/
 
+._bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../assets/images/warehouse.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+._layout--login {
+  height: 100vh;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include respSpecif(1250) {
+    margin: 0 15px;
+  }
+}
+
+._layout--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+._login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 1000px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @include respSpecif(1400) {
+    margin: 50px;
+  }
+
+  ._login__block {
+    padding: 30px;
+  }
+}
+
+._login__img {
+  width: 500px;
+}
+
 ._f--login {
   //display: flex;
   //flex-direction: column;
   display: grid;
   margin-bottom: 20px;
+  margin-right: 0;
 }
 
 .input-password {
@@ -294,18 +352,34 @@
 ._btnContainer--login {
   ._btn--fill {
     margin-right: 10px;
+
+    &:hover {
+      border: 1px solid $color-base;
+      color: $color-primary;
+      background-color: $color-base;
+      cursor: pointer;
+    }
   }
 }
 
-._btn--register:hover {
-  background-color: $color-hover-secondary;
-  cursor: pointer;
+._btn--register {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $color-base;
+  padding: calc(6px - 1px) calc(13px - 1px);
+
+  &:hover {
+    border: 2px solid $color-primary;
+    margin: 0;
+    padding: calc(6px - 2px) calc(13px - 2px);
+    cursor: pointer;
+  }
 }
 
 ._f {
   &--login & {
     &__label {
       margin-bottom: 5px;
+      color: $color-base;
     }
   }
 
@@ -313,7 +387,8 @@
     &__input {
       width: 300px;
       height: 35px;
-      border: 1px solid $color-primary;
+      border: 1px solid $color-base;
+      color: $color-base;
     }
   }
 }
