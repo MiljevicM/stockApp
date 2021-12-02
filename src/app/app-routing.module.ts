@@ -1,75 +1,55 @@
-import { InvoicePageComponent } from './ui/invoice-page/invoice-page.component';
-import { CompaniesPageComponent } from './ui/companies-page/companies-page.component';
-import { PackagingPageComponent } from './ui/packaging-page/packaging-page.component';
-import { SalesPageComponent } from './ui/sales-page/sales-page.component';
-import { StockPageComponent } from './ui/stock-page/stock-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InvoicesPageComponent } from './ui/invoices-page/invoices-page.component';
-import { LoginPageComponent } from './ui/login-page/login-page.component';
-
-/*
-const routes: Routes = [
-  { path: 'login', component: LoginPageComponent },
-  { path: 'invoices', component: InvoicesPageComponent },
-  { path: 'invoice', component: InvoicePageComponent},
-  { path: 'stock', component: StockPageComponent },
-  { path: 'packaging', component: PackagingPageComponent },
-  { path: 'sales', component: SalesPageComponent },
-  { path: 'companies', component: CompaniesPageComponent }
-];
-
-*/
 
 const routes: Routes = [
   {
+    path: 'login',
+    loadChildren: () =>
+      import('./features/login/login.module').then((m) => m.LoginModule),
+    data: { title: 'Login', header: false },
+  },
+
+  {
     path: 'invoices',
-    component: InvoicesPageComponent,
-    data: {
-      header: true,
-    },
+    loadChildren: () =>
+      import('./features/invoices/invoices.module').then(
+        (m) => m.InvoicesModule
+      ),
+    data: { title: 'Invoices', header: true },
   },
   {
     path: 'invoice',
-    component: InvoicePageComponent,
-    data: {
-      header: true,
-    },
+    loadChildren: () =>
+      import('./features/invoice/invoice.module').then((m) => m.InvoiceModule),
+    data: { title: 'Invoices', header: true },
   },
   {
     path: 'stock',
-    component: StockPageComponent,
-    data: {
-      header: true,
-    },
+    loadChildren: () =>
+      import('./features/stock/stock.module').then((m) => m.StockModule),
+    data: { title: 'Stock', header: true },
   },
   {
     path: 'packaging',
-    component: PackagingPageComponent,
-    data: {
-      header: true,
-    },
+    loadChildren: () =>
+      import('./features/packaging/packaging.module').then(
+        (m) => m.PackagingModule
+      ),
+    data: { title: 'Packaging', header: true },
   },
   {
     path: 'sales',
-    component: SalesPageComponent,
-    data: {
-      header: true,
-    },
+    loadChildren: () =>
+      import('./features/sales/sales.module').then((m) => m.SalesModule),
+    data: { title: 'Sales', header: true },
   },
   {
     path: 'companies',
-    component: CompaniesPageComponent,
-    data: {
-      header: true,
-    },
-  },
-  {
-    path: 'login',
-    component: LoginPageComponent,
-    data: {
-      header: false,
-    },
+    loadChildren: () =>
+      import('./features/companies/companies.module').then(
+        (m) => m.CompaniesModule
+      ),
+    data: { title: 'Companies', header: true },
   },
 ];
 

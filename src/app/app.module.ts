@@ -4,16 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UiComponent } from './ui/ui.component';
-import { LoginPageComponent } from './ui/login-page/login-page.component';
-import { InvoicesPageComponent } from './ui/invoices-page/invoices-page.component';
-import { StockPageComponent } from './ui/stock-page/stock-page.component';
-import { SalesPageComponent } from './ui/sales-page/sales-page.component';
-import { PackagingPageComponent } from './ui/packaging-page/packaging-page.component';
+
 import { ModalModule } from 'angular-custom-modal';
 import { DpDatePickerModule } from 'ng2-date-picker';
 import { FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { CompaniesPageComponent } from './ui/companies-page/companies-page.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -22,7 +17,7 @@ import {
   OwlNativeDateTimeModule,
   OWL_DATE_TIME_FORMATS,
 } from 'ng-pick-datetime';
-import { InvoicePageComponent } from './ui/invoice-page/invoice-page.component';
+
 import { LayoutComponent } from './layout/layout.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -39,17 +34,12 @@ export const MY_CUSTOM_FORMATS = {
   monthYearA11yLabel: 'MMMM YYYY',
 };
 
+
 @NgModule({
   declarations: [
     AppComponent,
     UiComponent,
-    LoginPageComponent,
-    InvoicesPageComponent,
-    StockPageComponent,
-    SalesPageComponent,
-    PackagingPageComponent,
-    CompaniesPageComponent,
-    InvoicePageComponent,
+  
     LayoutComponent,
     NavigationComponent,
     FooterComponent
@@ -58,6 +48,7 @@ export const MY_CUSTOM_FORMATS = {
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
     ModalModule,
     DpDatePickerModule,
     FormsModule,
@@ -66,9 +57,11 @@ export const MY_CUSTOM_FORMATS = {
     OwlNativeDateTimeModule,
     BrowserAnimationsModule,
   ],
+  
   providers: [
     { provide: OWL_DATE_TIME_FORMATS, useValue: MY_CUSTOM_FORMATS },
   ],
+  
   bootstrap: [AppComponent],
 })
 export class AppModule {}

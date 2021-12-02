@@ -1,0 +1,124 @@
+<section class="_layout">
+  <header class="_search-header">
+    <section class="_main-bar">
+      <p class="_main-bar__tittle">Search Invoices</p>
+      <form action="" class="_main-bar__search-section">
+        <fieldset class="_f _f--l">
+          <label for="name" class="_f__label">Company Name:</label>
+          <ng-select [items]="cities"> </ng-select>
+        </fieldset>
+        <fieldset class="_f _f--m">
+          <label for="date" class="_f__label">Date:</label>
+          <input  class="_f__input" type="text"
+          [(ngModel)]="dateFrom"
+          (dateTimeChange)="changeDate($event)"
+          [owlDateTimeTrigger]="dt"
+          [owlDateTime]="dt"
+          name="dateFrom"
+          placeholder="DD/MM/YYYY"
+          maxlength="10">
+        <owl-date-time [pickerType]="'both'" #dt></owl-date-time>
+        </fieldset>
+        <fieldset class="_f _f--s">
+          <label for="number" class="_f__label">Invoice No.:</label>
+          <input
+            type="number"
+            id="number"
+            name="number"
+            class="_f__input"
+            aria-label="type invoice number"
+          />
+        </fieldset>
+      </form>
+    </section>
+    <section class="_option">
+      <p class="_option__tittle">Create New Invoice</p>
+      <button
+        class="_btn _btn--fill"
+        aria-label="create invoice"
+        (click)="openModal()"
+      >
+        Create Invoice
+      </button>
+    </section>
+  </header>
+  <main>
+    <section class="_table-area">
+      <table class="_table">
+        <thead class="_table__thead">
+          <tr>
+            <th class="_table_th _table__th--l">Company Name</th>
+            <th class="_table_th _table__th--m">Date</th>
+            <th class="_table_th _table__th--s">Invoice No.</th>
+          </tr>
+        </thead>
+        <tbody class="_table__tbody">
+          <tr class="_table__tr _table__tr--grey">
+            <th class="_table__th">Example company</th>
+            <th class="_table__th">10.08.2021.</th>
+            <th class="_table__th">354</th>
+          </tr>
+          <tr class="_table__tr">
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+          </tr>
+          <tr class="_table__tr _table__tr--grey">
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+            <th class="_table__th">#</th>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <!-- Modal -->
+  <section class="_modal" *ngIf="isShown" (click)="clickedOutside($event)">
+    <div class="_modal__inquiry _modal__inquiry--s">
+      <div class="_modal__form">
+        <form action="">
+          <fieldset class="_f _f--modal">
+            <label for="product" class="_f__label">Client Name:</label>
+            <input type="text" name="product" id="product" class="_f__input" />
+          </fieldset>
+          <fieldset class="_f _f--modal">
+            <label for="date" class="_f__label">Date of Supply Of Goods:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              min="2021-01"
+              class="_f__input"
+            />
+          </fieldset>
+          <fieldset class="_f _f--modal">
+            <label for="date" class="_f__label">Invoice Date:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              min="2021-01"
+              class="_f__input"
+            />
+          </fieldset>
+          <fieldset class="_f _f--modal">
+            <label for="date" class="_f__label">Value Date:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              min="2021-01"
+              class="_f__input"
+            />
+          </fieldset>
+        </form>
+        <div class="_btnContainer _btnContainer--modal">
+          <button class="_btn _btn--fill">Next</button>
+          <button class="_btn _btn--empty" (click)="cancelModal()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
