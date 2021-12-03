@@ -127,544 +127,554 @@
       }
     }
 
-    ._table__tr--grey {
+    ._table__tr:nth-child(odd) {
+      height: 44px;
       background-color: $color-row-table;
-    }
-
-    ._table__th {
-      padding-left: 15px;
-      font-weight: normal;
-      color: $color-text-normal;
-    }
-  }
-}
-
-/*-------/////////////---------------*/
-
-/*----HEADER----*/
-
-._search-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  font-family: $font-primary;
-  color: $color-text-normal;
-  font-weight: normal;
-  font-size: 1rem;
-}
-
-/*------MAIN BAR------*/
-
-._main-bar {
-  width: 75%;
-}
-
-._main-bar--full-width {
-  width: 100%;
-}
-
-._main-bar__tittle {
-  border-bottom: 1px solid $color-header-lines;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-}
-
-._main-bar__search-section {
-  display: flex;
-}
-
-._option {
-  width: 22%;
-}
-
-._option__tittle {
-  border-bottom: 1px solid $color-header-lines;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-}
-
-/*----TABLE SECTION----*/
-
-._table-area {
-  display: flex;
-  margin-top: 70px;
-}
-
-._table__th--l {
-  width: 800px;
-  padding-left: 15px;
-}
-
-._table__th--m {
-  width: 350px;
-  padding-left: 15px;
-}
-
-._table__th--s {
-  width: 150px;
-  padding-left: 15px;
-}
-
-/*----NAVIGATION----*/
-
-._navigation-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  overflow: hidden;
-  background-color: $color-navbar;
-
-  ._navigation-content {
-    display: flex;
-    width: 1200px;
-    justify-content: space-between;
-  }
-
-  ._logo {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-
-    ._logo__img {
-      width: 90px;
-      margin-left: 10px;
-      cursor: pointer;
 
       &:hover {
-        transform: translateY(-2px);
-        transition: 0.4s all;
+        background-color: $color-hover-table;
       }
     }
-  }
 
-  ._pages {
-    display: flex;
-    ._page-link {
-      padding: 20px 16px;
-      font-family: $font-primary;
-      color: $color-base;
-      font-weight: normal;
-      font-size: 1rem;
-      text-decoration: none;
-
-      &:hover {
-        background-color: $color-hover-navbar;
-        color: $color-text-normal;
+      ._table__tr--grey {
+        background-color: $color-row-table;
       }
 
-      &.active {
-        background-color: $color-hover-navbar;
+      ._table__th {
+        padding-left: 15px;
+        font-weight: normal;
         color: $color-text-normal;
       }
     }
   }
-}
 
-/*----FOOTER----*/
+  /*-------/////////////---------------*/
 
-._footer-container {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  background-color: $color-footer;
+  /*----HEADER----*/
 
-  ._footer {
+  ._search-header {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
-    padding: 20px 50px;
+    margin-bottom: 30px;
     font-family: $font-primary;
-    color: rgba(0, 0, 0, 0.7);
-    font-weight: normal;
-    font-size: 0.8rem;
-
-    &:hover {
-      color: $color-text-normal;
-      cursor: pointer;
-    }
-  }
-}
-
-/*----LOGIN PAGE----*/
-
-._bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../assets/images/warehouse.jpg);
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-._layout--login {
-  height: 100vh;
-  max-width: 100%;
-  margin: 0 auto;
-
-  @include respSpecif(1250) {
-    margin: 0 15px;
-  }
-}
-
-._layout--center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-._login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  width: 1000px;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  @include respSpecif(1400) {
-    margin: 50px;
-  }
-
-  ._login__block {
-    padding: 30px;
-  }
-}
-
-._login__img {
-  width: 500px;
-}
-
-._f--login {
-  //display: flex;
-  //flex-direction: column;
-  display: grid;
-  margin-bottom: 20px;
-  margin-right: 0;
-}
-
-.input-password {
-  display: flex;
-  align-items: center;
-}
-
-._btnContainer--login {
-  ._btn--fill {
-    margin-right: 10px;
-
-    &:hover {
-      border: 1px solid $color-base;
-      color: $color-primary;
-      background-color: $color-base;
-      cursor: pointer;
-    }
-  }
-}
-
-._btn--register {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: $color-base;
-  padding: calc(6px - 1px) calc(13px - 1px);
-
-  &:hover {
-    border: 2px solid $color-primary;
-    margin: 0;
-    padding: calc(6px - 2px) calc(13px - 2px);
-    cursor: pointer;
-  }
-}
-
-._f {
-  &--login & {
-    &__label {
-      margin-bottom: 5px;
-      color: $color-base;
-    }
-  }
-
-  &--login & {
-    &__input {
-      width: 300px;
-      height: 35px;
-      border: 1px solid $color-base;
-      color: $color-base;
-    }
-  }
-}
-
-/*----INVOICE PAGE----///////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-._layout--invoice {
-  align-items: baseline;
-  background-color: $color-base;
-
-  ._info-block {
-    display: flex;
-    flex-direction: row;
-  }
-
-  ._info-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: $font-primary;
-    color: $color-text-bold;
+    color: $color-text-normal;
     font-weight: normal;
     font-size: 1rem;
-    line-height: 2rem;
+  }
 
+  /*------MAIN BAR------*/
+
+  ._main-bar {
+    width: 75%;
+  }
+
+  ._main-bar--full-width {
+    width: 100%;
+  }
+
+  ._main-bar__tittle {
     border-bottom: 1px solid $color-header-lines;
     padding-bottom: 10px;
-    margin-bottom: 20px;
-
-    ._company-info {
-      margin-right: 100px;
-    }
+    margin-bottom: 30px;
   }
 
-  ._date-info {
+  ._main-bar__search-section {
     display: flex;
-    flex-direction: row;
-    font-family: $font-primary;
-    color: $color-text-bold;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 2rem;
-    align-items: center;
+  }
 
+  ._option {
+    width: 22%;
+  }
+
+  ._option__tittle {
     border-bottom: 1px solid $color-header-lines;
     padding-bottom: 10px;
-    margin-bottom: 20px;
-
-    & p {
-      margin-right: 50px;
-      text-align: center;
-    }
+    margin-bottom: 30px;
   }
 
-  ._option-block {
-    display: flex;
-    flex-direction: row;
-
-    ._option--invoice {
-      width: 150px;
-    }
-  }
+  /*----TABLE SECTION----*/
 
   ._table-area {
-    margin-top: 0;
-    ._table {
-      text-align: center;
+    display: flex;
+    margin-top: 70px;
+  }
 
-      ._table__th--l {
-        width: 800px;
-        padding-left: 0;
+  ._table__th--l {
+    width: 800px;
+    padding-left: 15px;
+  }
+
+  ._table__th--m {
+    width: 350px;
+    padding-left: 15px;
+  }
+
+  ._table__th--s {
+    width: 150px;
+    padding-left: 15px;
+  }
+
+  /*----NAVIGATION----*/
+
+  ._navigation-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    overflow: hidden;
+    background-color: $color-navbar;
+
+    ._navigation-content {
+      display: flex;
+      width: 1200px;
+      justify-content: space-between;
+    }
+
+    ._logo {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      ._logo__img {
+        width: 90px;
+        margin-left: 10px;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-2px);
+          transition: 0.4s all;
+        }
       }
+    }
 
-      ._table__th--m {
-        width: 350px;
-        padding-left: 0;
-      }
+    ._pages {
+      display: flex;
+      ._page-link {
+        padding: 20px 16px;
+        font-family: $font-primary;
+        color: $color-base;
+        font-weight: normal;
+        font-size: 1rem;
+        text-decoration: none;
 
-      ._table__th--s {
-        width: 150px;
-        padding-left: 0;
-      }
+        &:hover {
+          background-color: $color-hover-navbar;
+          color: $color-text-normal;
+        }
 
-      ._table__tbody {
-        ._table__th {
-          padding-left: 0;
+        &.active {
+          background-color: $color-hover-navbar;
+          color: $color-text-normal;
         }
       }
     }
   }
-}
 
-._option--center {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 30px;
-}
-._total-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  font-family: $font-primary;
-  color: $color-text-bold;
-  font-weight: normal;
-  font-size: 1rem;
-  line-height: 2rem;
-  align-items: center;
+  /*----FOOTER----*/
 
-  border-top: 1px solid $color-header-lines;
-  padding-top: 10px;
-  margin-top: 20px;
+  ._footer-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background-color: $color-footer;
 
-  & p {
-    margin-left: 50px;
-    text-align: center;
+    ._footer {
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      padding: 20px 50px;
+      font-family: $font-primary;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: normal;
+      font-size: 0.8rem;
+
+      &:hover {
+        color: $color-text-normal;
+        cursor: pointer;
+      }
+    }
   }
-}
 
-/*-----------------------------///////////////////////////////////////////////////////////////////////////////////-*
+  /*----LOGIN PAGE----*/
+
+  ._bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(../assets/images/warehouse.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  ._layout--login {
+    height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @include respSpecif(1250) {
+      margin: 0 15px;
+    }
+  }
+
+  ._layout--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  ._login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    @include respSpecif(1400) {
+      margin: 50px;
+    }
+
+    ._login__block {
+      padding: 30px;
+    }
+  }
+
+  ._login__img {
+    width: 500px;
+  }
+
+  ._f--login {
+    //display: flex;
+    //flex-direction: column;
+    display: grid;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .input-password {
+    display: flex;
+    align-items: center;
+  }
+
+  ._btnContainer--login {
+    ._btn--fill {
+      margin-right: 10px;
+
+      &:hover {
+        border: 1px solid $color-base;
+        color: $color-primary;
+        background-color: $color-base;
+        cursor: pointer;
+      }
+    }
+  }
+
+  ._btn--register {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $color-base;
+    padding: calc(6px - 1px) calc(13px - 1px);
+
+    &:hover {
+      border: 2px solid $color-primary;
+      margin: 0;
+      padding: calc(6px - 2px) calc(13px - 2px);
+      cursor: pointer;
+    }
+  }
+
+  ._f {
+    &--login & {
+      &__label {
+        margin-bottom: 5px;
+        color: $color-base;
+      }
+    }
+
+    &--login & {
+      &__input {
+        width: 300px;
+        height: 35px;
+        border: 1px solid $color-base;
+        color: $color-base;
+      }
+    }
+  }
+
+  /*----INVOICE PAGE----///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+  ._layout--invoice {
+    align-items: baseline;
+    background-color: $color-base;
+
+    ._info-block {
+      display: flex;
+      flex-direction: row;
+    }
+
+    ._info-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: $font-primary;
+      color: $color-text-bold;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 2rem;
+
+      border-bottom: 1px solid $color-header-lines;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+
+      ._company-info {
+        margin-right: 100px;
+      }
+    }
+
+    ._date-info {
+      display: flex;
+      flex-direction: row;
+      font-family: $font-primary;
+      color: $color-text-bold;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 2rem;
+      align-items: center;
+
+      border-bottom: 1px solid $color-header-lines;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+
+      & p {
+        margin-right: 50px;
+        text-align: center;
+      }
+    }
+
+    ._option-block {
+      display: flex;
+      flex-direction: row;
+
+      ._option--invoice {
+        width: 150px;
+      }
+    }
+
+    ._table-area {
+      margin-top: 0;
+      ._table {
+        text-align: center;
+
+        ._table__th--l {
+          width: 800px;
+          padding-left: 0;
+        }
+
+        ._table__th--m {
+          width: 350px;
+          padding-left: 0;
+        }
+
+        ._table__th--s {
+          width: 150px;
+          padding-left: 0;
+        }
+
+        ._table__tbody {
+          ._table__th {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  ._option--center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  ._total-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    font-family: $font-primary;
+    color: $color-text-bold;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 2rem;
+    align-items: center;
+
+    border-top: 1px solid $color-header-lines;
+    padding-top: 10px;
+    margin-top: 20px;
+
+    & p {
+      margin-left: 50px;
+      text-align: center;
+    }
+  }
+
+  /*-----------------------------///////////////////////////////////////////////////////////////////////////////////-*
 
 
 /*----PACKAGING PAGE----*/
 
-._tabs-bar {
-  display: flex;
-  align-items: center;
-  height: 40px;
-  margin-top: 70px;
-  margin-bottom: 20px;
-  border-radius: 4px 4px 0px 0px;
-  font-family: $font-primary;
-  font-size: 1rem;
-  font-weight: bold;
-  background: $color-tab-bar;
-  color: $color-base;
-
-  ._tabs {
+  ._tabs-bar {
     display: flex;
-    flex-direction: row;
-    list-style-type: none;
+    align-items: center;
+    height: 40px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    border-radius: 4px 4px 0px 0px;
+    font-family: $font-primary;
+    font-size: 1rem;
+    font-weight: bold;
+    background: $color-tab-bar;
+    color: $color-base;
 
-    ._tabs__li {
-      .active {
-        padding: 26px 5px;
-        background-color: $color-base;
-        color: $color-primary;
-        cursor: pointer;
-      }
+    ._tabs {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
 
-      ._tabs__a {
-        padding: 5px 10px 20px;
-        border-radius: 5px 5px 0px 0px;
-        //margin-right: 25px;
-
-        &:hover {
-          padding: 5px 10px 10px;
-          color: $color-primary;
+      ._tabs__li {
+        .active {
+          padding: 26px 5px;
           background-color: $color-base;
+          color: $color-primary;
           cursor: pointer;
+        }
+
+        ._tabs__a {
+          padding: 5px 10px 20px;
+          border-radius: 5px 5px 0px 0px;
+          //margin-right: 25px;
+
+          &:hover {
+            padding: 5px 10px 10px;
+            color: $color-primary;
+            background-color: $color-base;
+            cursor: pointer;
+          }
         }
       }
     }
   }
-}
 
-._table-area--packaging {
-  margin-top: 0;
-}
-
-/*----MODAL----*/
-
-/* background */
-._modal {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4);
-
-  /* content */
-  ._modal__inquiry {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-    //width: 450px;
-    //height: 515px;
-    padding: 50px;
-    //border: 1px solid $color-primary;
-    border-radius: 10px;
-    background: $color-base;
+  ._table-area--packaging {
+    margin-top: 0;
   }
 
-  ._modal__form {
+  /*----MODAL----*/
+
+  /* background */
+  ._modal {
     display: flex;
-    flex-direction: column;
+    position: fixed;
+    align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* content */
+    ._modal__inquiry {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      //width: 450px;
+      //height: 515px;
+      padding: 50px;
+      //border: 1px solid $color-primary;
+      border-radius: 10px;
+      background: $color-base;
+    }
+
+    ._modal__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    ._modal__column {
+      display: flex;
+      ._f__input {
+        margin-right: 10px;
+      }
+    }
+
+    ._f--modal {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-right: 0px;
+    }
   }
 
-  ._modal__column {
-    display: flex;
-    ._f__input {
+  ._f {
+    &--modal & {
+      &__input {
+        width: 275px;
+        height: 39px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &--modal & {
+      &__label {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--modal--checkbox & {
+      &__label {
+        margin-right: 0px;
+      }
+    }
+  }
+  ._btnContainer--modal {
+    ._btn--fill {
       margin-right: 10px;
     }
   }
 
-  ._f--modal {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-right: 0px;
+  ._modal__inquiry--s {
+    padding: 40px;
   }
-}
 
-._f {
-  &--modal & {
-    &__input {
-      width: 275px;
-      height: 39px;
-      margin-bottom: 20px;
+  ._modal--columns {
+    ._form {
+      display: flex;
+    }
+
+    ._modal__column {
+      display: block;
     }
   }
 
-  &--modal & {
-    &__label {
-      margin-bottom: 10px;
+  /*-----Ng Select ----- */
+
+  ._f--l {
+    .ng-select {
+      font-weight: normal;
+
+      .ng-select-container {
+        min-height: 30px;
+        height: 30px;
+        width: 180px;
+        //border: 1px solid $color-primary;
+        //border-radius: 20px;
+        text-align: left;
+      }
     }
   }
 
-  &--modal--checkbox & {
-    &__label {
-      margin-right: 0px;
-    }
-  }
-}
-._btnContainer--modal {
-  ._btn--fill {
-    margin-right: 10px;
-  }
-}
-
-._modal__inquiry--s {
-  padding: 40px;
-}
-
-._modal--columns {
-  ._form {
-    display: flex;
-  }
-
-  ._modal__column {
-    display: block;
-  }
-}
-
-/*-----Ng Select ----- */
-
-._f--l {
-  .ng-select {
-    font-weight: normal;
-
-    .ng-select-container {
-      min-height: 30px;
-      height: 30px;
-      width: 180px;
-      //border: 1px solid $color-primary;
-      //border-radius: 20px;
-      text-align: left;
-    }
-  }
-}

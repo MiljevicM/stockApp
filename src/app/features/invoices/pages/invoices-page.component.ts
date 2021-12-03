@@ -1,3 +1,4 @@
+import { InvoicesService } from './../../../shared/services/invoices.service';
 import { Component, OnInit } from '@angular/core';
 
 import { OwlDateTimeIntl } from 'ng-pick-datetime';
@@ -20,8 +21,12 @@ export class InvoicesPageComponent implements OnInit {
 
   public dateFrom = '21/06/2019 22:22:45';
 
+  
+  invoices: any;
+
   constructor(
-    private owlDateTimeIntl: OwlDateTimeIntl
+    private owlDateTimeIntl: OwlDateTimeIntl,
+    private _invoiceService: InvoicesService
   ) {
     this.loadBtnI18n();
   }
@@ -35,7 +40,10 @@ export class InvoicesPageComponent implements OnInit {
     this.owlDateTimeIntl.cancelBtnLabel = 'Cancel';
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.initInvoices();
+
+  }
 
   openModal() {
     this.isShown = true;
@@ -50,4 +58,12 @@ export class InvoicesPageComponent implements OnInit {
       this.isShown = false;
     }
   }
+
+  initInvoices(){
+    this._invoiceService.getInvoices().subscribe((res: any) => {
+      console.log(res);
+      this.invoices = res;
+    })
+  }
+
 }
