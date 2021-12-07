@@ -1,6 +1,6 @@
 export interface CompanyModel {
     id: number;
-    name: string;
+    companyName: string;
     address: string;
     city: string;
     postCode: number;

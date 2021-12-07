@@ -53,23 +53,11 @@
           </tr>
         </thead>
         <tbody class="_table__tbody">
-          <tr class="_table__tr _table__tr" *ngFor="let invoice of invoices">
-            <th class="_table__th">{{invoice.name}}</th>
-            <th class="_table__th">{{invoice.date}}</th>
-            <th class="_table__th">{{invoice.id}}</th>
+          <tr class="_table__tr" *ngFor="let invoice of invoices$ | async">
+            <td class="_table__td">{{invoice.companyName}}</td>
+            <td class="_table__td">{{invoice.date | date: 'MMM d, y'}}</td>
+            <td class="_table__td">{{invoice.id}}</td>
           </tr>
-          <!---
-          <tr class="_table__tr">
-            <th class="_table__th">#</th>
-            <th class="_table__th">#</th>
-            <th class="_table__th">#</th>
-          </tr>
-          <tr class="_table__tr _table__tr--grey">
-            <th class="_table__th">#</th>
-            <th class="_table__th">#</th>
-            <th class="_table__th">#</th>
-          </tr>
-          -->
         </tbody>
       </table>
     </section>

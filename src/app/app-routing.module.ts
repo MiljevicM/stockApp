@@ -6,7 +6,7 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () =>
       import('./features/login/login.module').then((m) => m.LoginModule),
-    data: { title: 'Login', header: false },
+    data: { title: 'Login'},
   },
 
   {
@@ -15,19 +15,19 @@ const routes: Routes = [
       import('./features/invoices/invoices.module').then(
         (m) => m.InvoicesModule
       ),
-    data: { title: 'Invoices', header: true },
+    data: { title: 'Invoices'},
   },
   {
     path: 'invoice',
     loadChildren: () =>
       import('./features/invoice/invoice.module').then((m) => m.InvoiceModule),
-    data: { title: 'Invoices', header: true },
+    data: { title: 'Invoices'},
   },
   {
     path: 'stock',
     loadChildren: () =>
       import('./features/stock/stock.module').then((m) => m.StockModule),
-    data: { title: 'Stock', header: true },
+    data: { title: 'Stock'},
   },
   {
     path: 'packaging',
@@ -35,13 +35,13 @@ const routes: Routes = [
       import('./features/packaging/packaging.module').then(
         (m) => m.PackagingModule
       ),
-    data: { title: 'Packaging', header: true },
+    data: { title: 'Packaging'},
   },
   {
     path: 'sales',
     loadChildren: () =>
       import('./features/sales/sales.module').then((m) => m.SalesModule),
-    data: { title: 'Sales', header: true },
+    data: { title: 'Sales'},
   },
   {
     path: 'companies',
@@ -49,7 +49,7 @@ const routes: Routes = [
       import('./features/companies/companies.module').then(
         (m) => m.CompaniesModule
       ),
-    data: { title: 'Companies', header: true },
+    data: { title: 'Companies'},
   },
 ];
 

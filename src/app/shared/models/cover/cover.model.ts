@@ -1,5 +1,5 @@
 export interface CoverModel {
     id: number;
-    name: string;
-    counter: string;
+    productName: string;
+    counter: number;
 }

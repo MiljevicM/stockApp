@@ -1,9 +1,13 @@
+
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { StockModel} from 'src/app/shared/models/product-history/product-history.model';
+import { ProductHistoryService } from 'src/app/shared/services/product-history.service';
 
 @Component({
   selector: 'app-stock-page',
   templateUrl: './stock-page.component.html',
-  styleUrls: ['./stock-page.component.scss'],
+  styles: [],
 })
 export class StockPageComponent implements OnInit {
 
@@ -12,11 +16,12 @@ export class StockPageComponent implements OnInit {
 
   isChecked = false;
   
-  
-  constructor() {}
+  products$!: Observable<StockModel[]>;
+
+  constructor( private _productHistoryService: ProductHistoryService ) {}
 
   ngOnInit(): void {
-
+    this.initProducts();
   }
 
   openModal() {
@@ -31,6 +36,10 @@ export class StockPageComponent implements OnInit {
     if (event.target.className === '_modal _modal--columns') {
       this.isShown = false;
     }
+  }
+
+  initProducts(){
+    this.products$ = this._productHistoryService.getProducts();
   }
 
 }

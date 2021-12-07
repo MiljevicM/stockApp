@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-invoice-page',
   templateUrl: './invoice.component.html',
-  styleUrls: ['./invoice.component.scss']
+  styles: [],
 })
 export class InvoiceComponent implements OnInit {
   isShown: boolean = false;

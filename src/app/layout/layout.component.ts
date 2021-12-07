@@ -6,19 +6,18 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  styles: [],
 })
 export class LayoutComponent implements OnInit {
+  headerFooter: boolean = false;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
-  visibility: boolean = false;
-   ngOnInit() {
-      this.router.events.pipe(filter(events => events instanceof NavigationEnd), map(evt => this.activatedRoute), map(route => {
-         while (route.firstChild) {
-            route = route.firstChild;
-         }
-         return route;
-      })).pipe(filter(route => route.outlet === 'primary'), mergeMap(route => route.data)).subscribe(x => x.header === true ? this.visibility = true : this.visibility = false)
-}
 
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.headerFooter = event.url !== '/login';
+      }
+    });
+  }
 }

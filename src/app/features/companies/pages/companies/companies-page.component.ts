@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CompanyModel } from 'src/app/shared/models/company/company.model';
+import { CompaniesService } from 'src/app/shared/services/companies.service';
 
 @Component({
   selector: 'app-companies-page',
   templateUrl: './companies-page.component.html',
-  styleUrls: ['./companies-page.component.scss']
+  styles: [],
 })
 export class CompaniesPageComponent implements OnInit {
 
@@ -12,9 +15,12 @@ export class CompaniesPageComponent implements OnInit {
 
   isChecked = false;
 
-  constructor() { }
+  companies$!: Observable<CompanyModel[]>;
+
+  constructor(private _companiesService: CompaniesService) { }
 
   ngOnInit(): void {
+    this.initCompanies();
   }
 
   openModal() {
@@ -29,6 +35,10 @@ export class CompaniesPageComponent implements OnInit {
     if (event.target.className === '_modal _modal--columns') {
       this.isShown = false;
     }
+  }
+
+  initCompanies(){
+    this.companies$ = this._companiesService.getCompanies();
   }
 
 }

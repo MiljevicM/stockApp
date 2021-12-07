@@ -1,9 +1,9 @@
 @import "_mixins.scss";
 
-._table__th--mi {
+._table__td--mi {
   .material-icons {
     cursor: pointer;
-    margin-right: 15px;
+    margin-right: 10px;
     margin-left: 0;
     transition: 0.2s;
 
@@ -26,10 +26,10 @@
 }
 
 ._layout--invoice {
-  ._table__th {
+  ._table__td {
     .material-icons {
       cursor: pointer;
-      margin-right: 15px;
+      margin-right: 10px;
       margin-left: 0;
       transition: 0.2s;
 

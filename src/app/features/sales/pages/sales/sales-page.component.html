@@ -32,23 +32,11 @@
             </tr>
           </thead>
           <tbody class="_table__tbody">
-            <tr class="_table__tr _table__tr--grey">
-              <th class="_table__th">Example product</th>
-              <th class="_table__th">June 2021</th>
-              <th class="_table__th">3540</th>
-              <th class="_table__th">1528</th>
-            </tr>
-            <tr class="_table__tr">
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-            </tr>
-            <tr class="_table__tr _table__tr--grey">
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
+            <tr class="_table__tr" *ngFor="let product of products$ | async">
+              <td class="_table__td">{{product.productName}}</td>
+              <td class="_table__td">{{product.date | date: 'MMM d, y'}}</td>
+              <td class="_table__td">{{product.produced}}</td>
+              <td class="_table__td">{{product.sold}}</td>
             </tr>
           </tbody>
         </table>

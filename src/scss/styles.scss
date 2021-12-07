@@ -113,7 +113,7 @@
     height: 54px;
     border-bottom: 2px solid $color-primary;
 
-    ._table__th {
+    ._table__td {
       padding-left: 15px;
     }
   }
@@ -140,7 +140,7 @@
         background-color: $color-row-table;
       }
 
-      ._table__th {
+      ._table__td {
         padding-left: 15px;
         font-weight: normal;
         color: $color-text-normal;

@@ -40,36 +40,118 @@
             </tr>
           </thead>
           <tbody class="_table__tbody">
-            <tr class="_table__tr _table__tr--grey">
-              <th class="_table__th">Example product</th>
-              <th class="_table__th">3456</th>
-              <th class="_table__th _table__th--mi">
+            <tr class="_table__tr" *ngFor="let item of packaging$ | async">
+              <td class="_table__td">{{item.productName}}</td>
+              <td class="_table__td">{{item.counter}}</td>
+              <td class="_table__td _table__td--mi">
                 <span class="material-icons green">add_circle_outline</span>
                 <span class="material-icons blue">edit_note</span>
                 <span class="material-icons red">highlight_off</span>
-              </th>
-            </tr>
-            <tr class="_table__tr">
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th _table__th--mi">
-                <span class="material-icons green">add_circle_outline</span>
-                <span class="material-icons blue">edit_note</span>
-                <span class="material-icons red">highlight_off</span>
-              </th>
-            </tr>
-            <tr class="_table__tr _table__tr--grey">
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th _table__th--mi">
-                <span class="material-icons green">add_circle_outline</span>
-                <span class="material-icons blue">edit_note</span>
-                <span class="material-icons red">highlight_off</span>
-              </th>
+              </td>
             </tr>
           </tbody>
         </table>
       </section>
+      <section
+        class="_table-area _table-area--packaging"
+        *ngIf="selectedList === 'Covers'"
+      >
+        <table class="_table">
+          <thead class="_table__thead">
+            <tr>
+              <th class="_table__th _table__th--l">Product Name</th>
+              <th class="_table__th _table__th--m">In Stock</th>
+              <th class="_table__th _table__th--s"></th>
+            </tr>
+          </thead>
+          <tbody class="_table__tbody">
+            <tr class="_table__tr" *ngFor="let item of covers$ | async">
+              <td class="_table__td">{{item.productName}}</td>
+              <td class="_table__td">{{item.counter}}</td>
+              <td class="_table__td _table__td--mi">
+                <span class="material-icons green">add_circle_outline</span>
+                <span class="material-icons blue">edit_note</span>
+                <span class="material-icons red">highlight_off</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section
+      class="_table-area _table-area--packaging"
+      *ngIf="selectedList === 'Labels'"
+    >
+      <table class="_table">
+        <thead class="_table__thead">
+          <tr>
+            <th class="_table__th _table__th--l">Product Name</th>
+            <th class="_table__th _table__th--m">In Stock</th>
+            <th class="_table__th _table__th--s"></th>
+          </tr>
+        </thead>
+        <tbody class="_table__tbody">
+          <tr class="_table__tr" *ngFor="let item of labels$ | async">
+            <td class="_table__td">{{item.productName}}</td>
+            <td class="_table__td">{{item.counter}}</td>
+            <td class="_table__td _table__td--mi">
+              <span class="material-icons green">add_circle_outline</span>
+              <span class="material-icons blue">edit_note</span>
+              <span class="material-icons red">highlight_off</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section
+    class="_table-area _table-area--packaging"
+    *ngIf="selectedList === 'Boxes'"
+  >
+    <table class="_table">
+      <thead class="_table__thead">
+        <tr>
+          <th class="_table__th _table__th--l">Product Name</th>
+          <th class="_table__th _table__th--m">In Stock</th>
+          <th class="_table__th _table__th--s"></th>
+        </tr>
+      </thead>
+      <tbody class="_table__tbody">
+        <tr class="_table__tr" *ngFor="let item of boxes$ | async">
+          <td class="_table__td">{{item.productName}}</td>
+          <td class="_table__td">{{item.counter}}</td>
+          <td class="_table__td _table__td--mi">
+            <span class="material-icons green">add_circle_outline</span>
+            <span class="material-icons blue">edit_note</span>
+            <span class="material-icons red">highlight_off</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section
+  class="_table-area _table-area--packaging"
+  *ngIf="selectedList === 'Other'"
+>
+  <table class="_table">
+    <thead class="_table__thead">
+      <tr>
+        <th class="_table__th _table__th--l">Product Name</th>
+        <th class="_table__th _table__th--m">In Stock</th>
+        <th class="_table__th _table__th--s"></th>
+      </tr>
+    </thead>
+    <tbody class="_table__tbody">
+      <tr class="_table__tr" *ngFor="let item of other$ | async">
+        <td class="_table__td">{{item.productName}}</td>
+        <td class="_table__td">{{item.counter}}</td>
+        <td class="_table__td _table__td--mi">
+          <span class="material-icons green">add_circle_outline</span>
+          <span class="material-icons blue">edit_note</span>
+          <span class="material-icons red">highlight_off</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
     </main>
      <!-- Modal -->
      <section class="_modal" *ngIf="isShown" (click)="clickedOutside($event)">

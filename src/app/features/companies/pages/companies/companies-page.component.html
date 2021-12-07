@@ -30,44 +30,18 @@
             </tr>
           </thead>
           <tbody class="_table__tbody">
-            <tr class="_table__tr _table__tr--grey">
-              <th class="_table__th">Example company</th>
-              <th class="_table__th">Example street 34</th>
-              <th class="_table__th">Example city 11300</th>
-              <th class="_table__th">123456789</th>
-              <th class="_table__th">123456789</th>
-              <th class="_table__th">123456789</th>
-              <th class="_table__th">30</th>
-              <th class="_table__th _table__th--mi">
+            <tr class="_table__tr" *ngFor="let company of companies$ | async">
+              <td class="_table__td">{{company.companyName}}</td>
+              <td class="_table__td">{{company.address}}</td>
+              <td class="_table__td">{{company.city}}, {{company.postCode}}</td>
+              <td class="_table__td">{{company.pib}}</td>
+              <td class="_table__td">{{company.companyNo}}</td>
+              <td class="_table__td">{{company.bankNo}}</td>
+              <td class="_table__td">{{company.discount}}</td>
+              <td class="_table__td _table__td--mi">
                 <span class="material-icons blue">edit_note</span>
                 <span class="material-icons red">highlight_off</span>
-              </th>
-            </tr>
-            <tr class="_table__tr">
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th _table__th--mi">
-                <span class="material-icons blue">edit_note</span>
-                <span class="material-icons red">highlight_off</span>
-              </th>
-            </tr>
-            <tr class="_table__tr _table__tr--grey">
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th _table__th--mi">
-                <span class="material-icons blue">edit_note</span>
-                <span class="material-icons red">highlight_off</span>
-              </th>
+              </td>
             </tr>
           </tbody>
         </table>

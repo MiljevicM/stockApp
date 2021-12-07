@@ -25,32 +25,14 @@
             </tr>
           </thead>
           <tbody class="_table__tbody">
-            <tr class="_table__tr _table__tr--grey">
-              <th class="_table__th">Example product</th>
-              <th class="_table__th">3456</th>
-              <th class="_table__th _table__th--mi">
+            <tr class="_table__tr" *ngFor="let product of products$ | async">
+              <td class="_table__td">{{product.productName}}</td>
+              <td class="_table__td">{{product.inStock}}</td>
+              <td class="_table__td _table__td--mi">
                 <span class="material-icons green">add_circle_outline</span>
                 <span class="material-icons blue">edit_note</span>
                 <span class="material-icons red">highlight_off</span>
-              </th>
-            </tr>
-            <tr class="_table__tr">
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th _table__th--mi">
-                <span class="material-icons green">add_circle_outline</span>
-                <span class="material-icons blue">edit_note</span>
-                <span class="material-icons red">highlight_off</span>
-              </th>
-            </tr>
-            <tr class="_table__tr _table__tr--grey">
-              <th class="_table__th">#</th>
-              <th class="_table__th">#</th>
-              <th class="_table__th _table__th--mi">
-                <span class="material-icons green">add_circle_outline</span>
-                <span class="material-icons blue">edit_note</span>
-                <span class="material-icons red">highlight_off</span>
-              </th>
+              </td>
             </tr>
           </tbody>
         </table>

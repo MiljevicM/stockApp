@@ -1,5 +1,5 @@
 export interface LabelModel {
     id: number;
-    name: string;
-    counter: string;
+    productName: string;
+    counter: number;
 }
