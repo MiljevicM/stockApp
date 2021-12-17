@@ -51,6 +51,14 @@ const routes: Routes = [
       ),
     data: { title: 'Companies'},
   },
+  {
+    path: 'test',
+    loadChildren: () =>
+      import('./features/test-page/test-page.module').then(
+        (m) => m.TestPageModule
+      ),
+    data: { title: 'Test'},
+  },
 ];
 
 @NgModule({

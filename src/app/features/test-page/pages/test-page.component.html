@@ -1,0 +1,14 @@
+<section class="_layout">
+       <form [formGroup]="form">
+         <fieldset class="_f _f--l" >
+           <label for="name" class="_f__label">Company Name:</label>
+           <ng-select [items]="categories"
+           [searchable]="true" 
+           bindLabel="name"
+           formControlName="id">
+       </ng-select>
+         </fieldset>
+       </form>
+       <pre>{{form.value | json}}</pre>
+ </section>
+ 

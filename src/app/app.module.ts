@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 import { ModalModule } from 'angular-custom-modal';
 import { DpDatePickerModule } from 'ng2-date-picker';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +21,7 @@ import {
 import { LayoutComponent } from './layout/layout.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { InvoiceCreateComponent } from './features/blocks/invoice-create/invoice-create.component';
 
 
 // Format custom
@@ -40,7 +41,8 @@ export const MY_CUSTOM_FORMATS = {
     AppComponent,
     LayoutComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    InvoiceCreateComponent
    
   ],
   imports: [
@@ -54,6 +56,8 @@ export const MY_CUSTOM_FORMATS = {
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+ 
 
    
   ],
