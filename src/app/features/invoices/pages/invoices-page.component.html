@@ -62,54 +62,6 @@
       </table>
     </section>
   </main>
-  <!-- Modal 
-  <section class="_modal" *ngIf="isShown" (click)="clickedOutside($event)">
-    <div class="_modal__inquiry _modal__inquiry--s">
-      <div class="_modal__form">
-        <form action="">
-          <fieldset class="_f _f--modal">
-            <label for="product" class="_f__label">Client Name:</label>
-            <input type="text" name="product" id="product" class="_f__input" />
-          </fieldset>
-          <fieldset class="_f _f--modal">
-            <label for="date" class="_f__label">Date of Supply Of Goods:</label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              min="2021-01"
-              class="_f__input"
-            />
-          </fieldset>
-          <fieldset class="_f _f--modal">
-            <label for="date" class="_f__label">Invoice Date:</label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              min="2021-01"
-              class="_f__input"
-            />
-          </fieldset>
-          <fieldset class="_f _f--modal">
-            <label for="date" class="_f__label">Value Date:</label>
-            <input
-              type="date"
-              id="date"
-              name="date"
-              min="2021-01"
-              class="_f__input"
-            />
-          </fieldset>
-        </form>
-        <div class="_btnContainer _btnContainer--modal">
-          <button class="_btn _btn--fill">Next</button>
-          <button class="_btn _btn--empty" (click)="cancelModal()">
-            Cancel
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
 </section>
+
+<app-invoice-create *ngIf="isShown" (close)="cancelModal()" [podatakOdRoditelja]="9"></app-invoice-create>

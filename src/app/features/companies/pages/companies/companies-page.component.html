@@ -47,62 +47,7 @@
         </table>
       </section>
     </main>
-    <!-- Modal -->
-    <section class="_modal _modal--columns" *ngIf="isShown" (click)="clickedOutside($event)">
-      <div class="_modal__inquiry">
-        <div class="_modal__form">
-          <form action="" class="_form">
-            <section class="_modal__column">
-            <fieldset class="_f _f--modal">
-              <label for="company" class="_f__label">Company Name:</label>
-              <input type="text" name="company" id="company" class="_f__input" />
-            </fieldset>
-            <fieldset class="_f _f--modal">
-              <label for="address" class="_f__label">Address:</label>
-              <input type="text" name="address" id="address" class="_f__input" />
-            </fieldset>
-            <fieldset class="_f _f--modal">
-              <label for="city" class="_f__label">City and Post Code:</label>
-              <input type="text" name="city" id="city" class="_f__input" />
-            </fieldset>
-            <fieldset class="_f _f--modal">
-              <label for="pib" class="_f__label">PIB:</label>
-              <input type="text" name="pib" id="pib" class="_f__input" />
-            </fieldset>
-          </section>
-            <section class="_modal__column">
-              <fieldset class="_f _f--modal">
-                <label for="companyNo" class="_f__label">Company Number:</label>
-                <input
-                  type="text"
-                  name="companyNo"
-                  id="companyNo"
-                  class="_f__input"
-                />
-              </fieldset>
-              <fieldset class="_f _f--modal">
-                <label for="bankNo" class="_f__label">Bank Number:</label>
-                <input type="text" name="bankNo" id="bankNo" class="_f__input" />
-              </fieldset>
-              <fieldset class="_f _f--modal">
-                <label for="discount" class="_f__label">Discount:</label>
-                <input
-                  type="text"
-                  name="discount"
-                  id="discount"
-                  class="_f__input"
-                />
-              </fieldset>
-            </section>
-          </form>
-          <div class="_btnContainer _btnContainer--modal">
-            <button class="_btn _btn--fill">Save</button>
-            <button class="_btn _btn--empty" (click)="cancelModal()">
-              Cancel
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
   </section>
+
+  <app-company-create *ngIf="isShown" (close)="cancelModal()" [podatakOdRoditelja]="9"></app-company-create>
   

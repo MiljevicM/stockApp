@@ -1,6 +1,4 @@
-<section class="_layout">
-  <!-- Modal -->
-  <section class="_modal">
+<section class="_modal"  (click)="clickedOutside($event)">
     <div class="_modal__inquiry _modal__inquiry--s">
       <div class="_modal__form">
         <form action="">
@@ -40,10 +38,13 @@
           </fieldset>
         </form>
         <div class="_btnContainer _btnContainer--modal">
-          <button class="_btn _btn--fill">Next</button>
-          <button class="_btn _btn--empty">Cancel</button>
+          <button class="_btn _btn--fill" routerLink=":id">Next</button>
+          <button class="_btn _btn--empty" (click)="cancelModal()">
+            Cancel
+          </button>
         </div>
       </div>
     </div>
   </section>
-</section>
+ 
+

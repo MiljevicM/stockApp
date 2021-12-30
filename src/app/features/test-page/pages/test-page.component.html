@@ -1,14 +1,29 @@
 <section class="_layout">
-       <form [formGroup]="form">
-         <fieldset class="_f _f--l" >
-           <label for="name" class="_f__label">Company Name:</label>
-           <ng-select [items]="categories"
-           [searchable]="true" 
-           bindLabel="name"
-           formControlName="id">
-       </ng-select>
-         </fieldset>
-       </form>
-       <pre>{{form.value | json}}</pre>
- </section>
+  <form [formGroup]="form">
+
+   <div class="_f _f--basic">
+     <label>Ime:</label>
+     <input type="text" formControlName="firstName">
+   </div>
+
+   <div class="_f _f--basic">
+     <label>Prezime:</label>
+     <input type="text" formControlName="lastName">
+   </div>
+
+   <div class="_f _f--select">
+     <label>Tip korisnika:</label>
+      <ng-select placeholder="Izaberi tip" formControlName="typeId" [clearable]="false" [searchable]="true">
+     <ng-option *ngFor="let t of types" [value]="t.id">
+         {{t.name}}
+     </ng-option>
+   </ng-select>
+   </div>
+  </form>
+  <button (click)="save()">Sacuvaj</button>
+</section>
+
+
+
+
  

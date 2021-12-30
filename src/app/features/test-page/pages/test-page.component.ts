@@ -9,56 +9,47 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class TestPageComponent implements OnInit {
 
- //testPage!: TestPageModel;
- form!: FormGroup;
-
-
- categories: any[] = [
-   {
-     id: 1,
-     name: "Example 1"
+  form!: FormGroup;
+  resultForm!: TestPageModel;
+ 
+ 
+  types: any[] = [
+    {
+      id: 1,
+      name: "Admin"
+    },
+    {
+     id: 2,
+     name: "Supplier"
    },
    {
-    id: 2,
-    name: "Example 2"
-  },
-  {
-    id: 3,
-    name: "Example 3"
-  },
-  {
-    id: 4,
-    name: "Example 4"
-  }
- ]
-
-  constructor(private _fb: FormBuilder) { }
-
-  ngOnInit(): void {
-    this.initForm();
-  
-  }
-
-  initForm() {
-    this.form = this._fb.group({
-      id: [this.categories || 0],
-      name: [this.categories || "", [Validators.required]],
-    });
-  
-  }
-
-
-
-/*
-  initForm() {
-    this.form = this._fb.group({
-      id: [this.testPage.id || 0],
-      firstName: [this.testPage.firstName || "", [Validators.required]],
-      lastName: [this.testPage.lastName || "", [Validators.required]],
-    });
-  
-  }
-*/
+     id: 3,
+     name: "User"
+   }
+  ]
+ 
+   constructor(private _fb: FormBuilder) { }
+ 
+   ngOnInit(): void {
+     this.initForm();
+   
+   }
+ 
+   initForm() {
+     this.form = this._fb.group({
+       id: [0, []],
+       firstName: [null, [Validators.required]],
+       lastName: [null, [Validators.required]],
+       typeId: [null, [Validators.required]],
+     });
+   
+   }
+ 
+ 
+   save(){
+     this.resultForm = Object.assign({}, this.form.getRawValue());
+     console.log("🚀 ~ TestPageComponent ~ save ~ resultForm", this.resultForm);
+   }
 
 
 }

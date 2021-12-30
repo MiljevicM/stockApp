@@ -18,12 +18,6 @@ const routes: Routes = [
     data: { title: 'Invoices'},
   },
   {
-    path: 'invoice',
-    loadChildren: () =>
-      import('./features/invoice/invoice.module').then((m) => m.InvoiceModule),
-    data: { title: 'Invoices'},
-  },
-  {
     path: 'stock',
     loadChildren: () =>
       import('./features/stock/stock.module').then((m) => m.StockModule),

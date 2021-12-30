@@ -21,7 +21,6 @@ import {
 import { LayoutComponent } from './layout/layout.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { InvoiceCreateComponent } from './features/blocks/invoice-create/invoice-create.component';
 
 
 // Format custom
@@ -42,7 +41,6 @@ export const MY_CUSTOM_FORMATS = {
     LayoutComponent,
     NavigationComponent,
     FooterComponent,
-    InvoiceCreateComponent
    
   ],
   imports: [
